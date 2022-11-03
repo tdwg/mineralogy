@@ -1,2 +1,2 @@
-# mineralogy
-Mineralogical Collections Extension
+# Mineralogical Collections Extension
+
