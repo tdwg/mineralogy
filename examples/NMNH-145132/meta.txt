@@ -1,0 +1,18 @@
+Catalog Number:	145132 00
+Specimen Count:	1
+Identification List:
+Taxon	Qualifier	Part	Id By	Texture/Structure	Color
+Pyrite		Primary Mineral
+Quartz		Associated Mineral
+Country:	United States
+Province/State:	Washington
+District/County:	King Co.
+Precise Locality:	Spruce Mtn.
+Latitude:	47.43
+Longitude:	-121.8
+Radius:	67 km
+Notes:	Matched to the GeoNames record for King Co., WA, United States (http://geonames.org/5799783) based on district/county name, state/province, and country using the situate.py script. Another place name mentioned in the EMu record (Spruce Mtn) could not be matched and was ignored when determining the coordinates given here. Bounding box coordinates were rounded to 2 decimal places from the values given by GeoNames. The uncertainty radius represents the center-to-corner distance of the bounding box (67 km).
+Other Numbers:
+Type	Value
+IGSN ID	10.58151/NHB00183Y
+EZID:	http://n2t.net/ark:/65665/3ae01ef2d-36d7-4206-9615-2d12268e8691

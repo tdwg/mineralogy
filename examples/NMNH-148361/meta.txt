@@ -1,0 +1,12 @@
+Catalog Number:	148361 00
+Specimen Count:	1
+Identification List:
+Taxon	Qualifier	Part	Id By	Texture/Structure	Color
+Pyrite		Primary Mineral
+Quartz		Associated Mineral
+Country:	Peru
+Precise Locality:	Huanzala
+Other Numbers:
+Type	Value
+IGSN ID	10.58151/NHB001AP9
+EZID:	http://n2t.net/ark:/65665/383a7ebcc-aa53-4a80-af4d-4f6800aa8c73

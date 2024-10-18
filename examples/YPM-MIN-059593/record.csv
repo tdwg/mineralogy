@@ -1,0 +1,3 @@
+id,occurrence_id,last_modified,callnumber,title,scientificname,collector,collecting_date,latitude,longitude,datum,geographic_continent,geographic_country,geographic_stateprovince,geographic_county,geographic_municipality,geographic_locality,common_name,type,format,era,geographic_culture,identified_by,identification_references,previous_identifications,associated_references,image_path,image_link
+
+2990608,urn:uuid:2119c936-1070-48fe-9373-da9a7458c8a7,2022-01-28T16:33:40.000Z,YPM MIN 059593,Quartz; YPM MIN 059593,Quartz,,,,,,,,,,,,minerals,rutilated quartz xl; MIN number 59593; lot count 1; ; ; Old Peabody Collection; accn=YPM.12802,,,,,,,Quartz,,"https://images.collections.yale.edu/iiif/2/ypm:54d4dbf6-7d97-453e-aaf8-9d0890ebac32/full/!1920,1920/0/default.jpg"
