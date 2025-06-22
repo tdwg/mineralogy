@@ -12,46 +12,57 @@ Units
 1.2rem
 1.5rem 24px
 
-Default Color: #BC2E02 (Wulfenite)
-Latimer Core: #BC2E02
+Default Color: #992C34  (Wulfenite)
+Latimer Core: #992C34 
+
+Alt Orange/Reds
+#992C34  (orange)
+#992C34  (red)
+#992C34  (darker red)
+#992C34  (red)
+#992C34  (orange)
+#BE4D02 (orange 2)
+#992C34 
 */
 .home-content header.header.bg-no-image,
 .custom-bg-color {
-	background-color: #BC2E02 !important;
+	background-color: #992C34  !important;
 }
 .custom-text-color {
-	color: #BC2E02 !important;
+	color: #992C34  !important;
 }
 .btn-outline-primary {
-    color: #BC2E02;
-    border-color: #BC2E02;
+    color: #992C34 ;
+    border-color: #992C34 ;
 	font-weight: 500;
 }
 .btn-outline-primary:hover,
 .btn-outline-primary:focus {
-	background-color: #BC2E02;
+	background-color: #992C34 ;
 	color: #FFFFFF;
 	font-weight: 500;
 }
 .th-collapser i.fa {
 	background: transparent;
-	color: #BC2E02;
+	color: #992C34 ;
 	font-size: 18px;
 	margin-left: 10px;
 }
 td.indicator-td {
-	color: #BC2E02;
+	color: #992C34 ;
 	text-align: center;
 }
 table.table-sssom tbody tr th.col-w-4:hover {
-	background-color: #BC2E02;
+	background-color: #992C34 ;
 	color: #FFFFFF;
 }
 th.popover-container .popover .popover-header {
-	background-color: #BC2E02;
+	background-color: #992C34 ;
 	color: #FFFFFF;
 }
-
+.navbar-dark .navbar-nav .nav-link {
+	color: rgba(255, 255, 255, 0.9);
+}
 
 /* Smooth Scrolling */
 html,body {
@@ -155,7 +166,7 @@ table thead > tr > th {
 	font-weight: 400;
 }
 table thead > tr > th span {
-	font-weight: 700;
+	font-weight: 500;
 }
 table tbody > tr > th {
 	width: 15%;
@@ -181,7 +192,6 @@ tbody tr.class a,
 tbody tr td.class a {
 	color: rgba(102,10,16,1);
 }
-/*
 caption.class,
 caption.property,
 thead tr th.class,
@@ -192,21 +202,22 @@ tbody tr td.class a,
 tbody tr td.property a {
 	color: #FFFFFF;
 }
- */
+
 caption.property,
 thead tr th.property,
-tbody tr td.property,
+tbody tr td.property {
+	background-color: rgba(4, 130, 37, 1);
+}
+th.property span.title {
+	line-height: 1.7;
+}
 tbody tr td.property a {
-/*	background-color: rgba(4, 130, 37, 0.8); */
-	color: rgba(4, 130, 37, 1);
-	font-weight: 500;
-	letter-spacing: 0.04em;
+	color: #FFFFFF;
 }
 caption.class,
 thead tr th.class,
 tbody tr td.class {
-	/* background-color: rgba(102, 14, 17, 0.8); */
-	color: rgba(102, 14, 17, 1);
+	background-color: rgba(102, 14, 17, 0.8);
 }
 thead tr th span.title {
 	letter-spacing: 0.02em;
@@ -445,9 +456,6 @@ table.table-sssom tbody [data-bs-toggle="collapse"].collapsed .indicator-td .fa:
 	font-weight: 400;
 	padding-left: 10px;
 }
-
-
-
 table.table-sssom thead tr th {
 	padding: 0;
 	text-align: left;
@@ -510,7 +518,11 @@ table.nested-table tbody tr td {
 table.nested-table tbody tr td:first-of-type {
 	padding: 0 0.5rem;
 }
+/* Requirements Tables -------------------------------- */
 
+.table-header.mt-20 {
+	margin-top: 20px;
+}
 
 
 /* Footer --------------------------------------------- */
@@ -761,7 +773,7 @@ Original:#043B58;
 Red: #8C3515
 Green: #235900
 Green 2: #006653
-Purple: #BC2E02
+Purple: #992C34 
 */
 /* Fullscreen */
 .mermaid {

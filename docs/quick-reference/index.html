@@ -1,0 +1,3528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Mineralogy Extension Quick Reference Guide</title>
+	<meta property="og:url" content="https://tdwg.github.io/mineralogy/list/">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Mineralogy Extension Documentation">
+	<link rel="icon" type="image/x-icon" href="https://www.tdwg.org/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Marck+Script&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../static/assets/theme/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../static/assets/theme/css/pygments.css">
+	<link rel="stylesheet" href="../static/assets/theme/css/main.css">
+
+	<link rel="stylesheet" href="../static/custom/css/custom.css">
+	<link rel="stylesheet" href="../static/custom/css/print.css" media="print">
+
+
+</head>
+<body id="page-top">
+<nav class="navbar navbar-expand-lg navbar-dark custom-bg-color" id="main-nav">
+	<div class="container">
+	    <a class="navbar-brand d-flex align-items-center" href="https://mineralogy.tdwg.org">
+	        <img class="me-3" src="https://tdwg.github.io/chrono/assets/theme/images/tdwg-logo-short.svg" alt="Mineralogy Extension">
+            Mineralogy Extension
+	    </a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+			Menu <i class="fas fa-bars"></i>
+		</button>
+		<div class="collapse navbar-collapse" id="navbar-menu">
+			<ul class="navbar-nav ms-auto">
+				<li class="navbar-item">
+					<a class="nav-link "
+                       href="../index.html">Home</a>
+				</li>
+                 <li class="navbar-item">
+                     <a class="nav-link "
+                        href="../terms/index.html">Terms</a>
+                </li>
+                  <li class="navbar-item">
+                     <a class="nav-link nav-link-active"
+                        href="index.html">Quick Reference</a>
+                </li>
+				<li class="navbar-item">
+					<a class="nav-link" href="https://github.com/tdwg/mineralogy">GitHub</a>
+				</li>
+            </ul>
+		</div>
+	</div>
+</nav>
+
+
+    <main id="top">
+        <header class="header custom-bg-color">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-lg-8 position-relative mx-auto">
+				<h1>Quick Reference Guide</h1>
+			</div>
+		</div>
+	</div>
+</header>
+        <div class="container content">
+            <div class="row">
+                <div class="col-lg-3 mx-auto">
+                    <div class="toc">
+    <h6>On this page</h6>
+    <ul>
+        
+            <li><a href="#MineralName">MineralName</a></li>
+        
+        
+            <li><a href="#Chemistry">Chemistry</a></li>
+        
+            <li><a href="#ChronometricAge">ChronometricAge</a></li>
+        
+            <li><a href="#Conservation">Conservation</a></li>
+        
+            <li><a href="#ConstituentPart">ConstituentPart</a></li>
+        
+            <li><a href="#GeologicContext">GeologicContext</a></li>
+        
+            <li><a href="#Hazard">Hazard</a></li>
+        
+            <li><a href="#Location">Location</a></li>
+        
+            <li><a href="#MaterialAssertion">MaterialAssertion</a></li>
+        
+        <li></li>
+        <li><a href="#top"><em>Return to Top</em></a></li>
+    </ul>
+</div>
+
+                </div>
+                <div class="col-lg-9 order-lg-first mx-auto">
+                    <div class="content-header-wrapper">
+                        
+                            <h2><span style="color:red">DRAFT</span></h2>
+                        
+                        <p>This document is intended to be an easy-to-read reference the currently recommended terms of the Mineralogy Extension. 
+This document is not part of the standard. It draws on the term names and definitions from the normative part of the 
+standard and combines them with comments and examples that are not normative, but that are meant to help people to use 
+the terms consistently. Comprehensive metadata for current and obsolete terms in human readable 
+form are found in a list of terms document. <em>List of files and types</em> can be found in the Mineralogy Extension repository.</p>
+
+                    </div>
+                    <h3>Requirements</h3>
+
+<p>The tables below provides a summary of the required classes and terms in the Mineralogy Extension.</p>
+
+<div class="table-outer-wrapper">
+    <h5 class="table-header">Required Classes</h5>
+    <div class="term-table-wrapper">
+        <div class="table-responsive print-avoid">
+            <table class="table table-compact table-terms">
+                <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>Label</th>
+                    <th>Required</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                    <tr>
+                        <td><a href="#ConstituentPart.ConstituentPart">minext::ConstituentPart</a></td>
+                        <td>Mineral</td>
+                        <td>True</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+
+        <h5 class="table-header mt-20">Required Terms</h5>
+        <div class="table-responsive print-avoid">
+            <table class="table table-compact table-terms">
+                <thead>
+                    <tr>
+                        <th>Term</th>
+                        <th>Label</th>
+                        <th>Class</th>
+                        <th>Required</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td><a href="#ConstituentPart.constituentPartType">minext::constituentPartType</a></td>
+                            <td>Constituent Part Type</td>
+                            <td>ConstituentPart</td>
+                            <td>True</td>
+                        </tr>
+                    
+                        <tr>
+                            <td><a href="#ConstituentPart.materialEntityIdentifier">minext::materialEntityIdentifier</a></td>
+                            <td>Material Identifier</td>
+                            <td>ConstituentPart</td>
+                            <td>True</td>
+                        </tr>
+                    
+                        <tr>
+                            <td><a href="#ConstituentPart.constituentPartIdentifier">minext::constituentPartIdentifier</a></td>
+                            <td>Constituent Part Identifier</td>
+                            <td>ConstituentPart</td>
+                            <td>True</td>
+                        </tr>
+                    
+                        <tr>
+                            <td><a href="#MineralName.name">minext::name</a></td>
+                            <td>Name</td>
+                            <td>MineralName</td>
+                            <td>True</td>
+                        </tr>
+                    
+                        <tr>
+                            <td><a href="#MineralName.nameIdentifier">minext::nameIdentifier</a></td>
+                            <td>Name Identifier</td>
+                            <td>MineralName</td>
+                            <td>True</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    <h1>Mineralogy Extension</h1>
+<a id="minext"></a>
+
+
+    <h2 id="Chemistry">Chemistry</h2>
+    <div class="my-4">
+         
+            <a class="btn btn-sm btn-outline-primary m-1" href="#Chemistry">minext:Chemistry</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#measuredChemistry">minext:measuredChemistry</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#chemistryRemarks">minext:chemistryRemarks</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#measuredFormulaSource">minext:measuredFormulaSource</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#mineralogicalAnalysisProtocol">minext:mineralogicalAnalysisProtocol</a>
+        
+    </div>
+    
+        <div class="table-responsive" id="Chemistry">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Chemistry</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Properties that describe the chemical composition of a mineral</td>
+                    </tr>
+                   
+                    
+                    
+
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="measuredChemistry">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:measuredChemistry</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Measured Formula</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A concise expression of the chemical composition of a mineral that shows the number of atoms of each element in a molecule, their spatial arrangement, and their linkage to each other.</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>SiO2 (65.76), TiO2 (32.120), Al2O3 (2.21)</span></li>
+									
+										<li><span>(Mg0.77Fe0.23)2SiO4</span></li>
+									
+										<li><span>An6.4 Ab73.6 Or20</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="chemistryRemarks">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:chemistryRemarks</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Chemistry Remarks</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>General remarks about the chemical and isotopic composition of a mineral</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="measuredFormulaSource">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:measuredFormulaSource</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Measured Formula Source</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A list (concatenated and separated) of resources associated with the reported measured chemistry described specifically enough to allow anyone in the future to use the same resources.</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Recommended best practice is to use full bibliographic citations, global unique identifiers, or resolvable and persistent URIs. See the broader concept http://rs.tdwg.org/dwc/terms/associatedReferences
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Novak, G. A., &amp; Gibbs, G. V. (1971). The crystal chemistry of the silicate garnets. American Mineralogist: Journal of Earth and Planetary Materials, 56(5-6), 791-825.</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="mineralogicalAnalysisProtocol">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:mineralogicalAnalysisProtocol</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Mineralogical Analysis Protocol</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>The technique utilized to determine the chemical composition or crystallography of a mineral</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Acronyms should be avoided even for widely recognized annotations. Recommended best practice is to use a controlled vocabulary such as https://vocabs.ardc.edu.au/viewById/650
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Wet Chemistry</span></li>
+									
+										<li><span>X-ray fluorescence</span></li>
+									
+										<li><span>Electron probe microanalysis</span></li>
+									
+										<li><span>Scanning electron microscopy with energy-dispersive X-ray spectroscopy</span></li>
+									
+										<li><span>X=ray diffraction </span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+
+    <h2 id="ChronometricAge">ChronometricAge</h2>
+    <div class="my-4">
+         
+            <a class="btn btn-sm btn-outline-primary m-1" href="#ChronometricAge">chrono:ChronometricAge</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#chronometricAgeEvent">chrono:chronometricAgeEvent</a>
+        
+    </div>
+    
+        <div class="table-responsive" id="ChronometricAge">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>ChronometricAge</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>An approximation of a temporal position (in the sense conveyed by https://www.w3.org/TR/owl-time/#time:TemporalPosition) that is supported via evidence.</td>
+                    </tr>
+                   
+                    
+                    
+
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="chronometricAgeEvent">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">chrono:chronometricAgeEvent</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Chronometric Age Event</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Geologic event or process the chronometric age of a mineral is attributed too</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Maximum Depositional Age</span></li>
+									
+										<li><span>Igneous Crystallization</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+
+    <h2 id="Conservation">Conservation</h2>
+    <div class="my-4">
+         
+            <a class="btn btn-sm btn-outline-primary m-1" href="#Conservation">minext:Conservation</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#treatments">minext:treatments</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#handlingRequirements">minext:handlingRequirements</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#damageRemarks">minext:damageRemarks</a>
+        
+    </div>
+    
+        <div class="table-responsive" id="Conservation">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Conservation</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Processes, protocols, and techniques established for the purpose of the protection and preservation of a mineral or specimen</td>
+                    </tr>
+                   
+                    
+                    
+
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="treatments">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:treatments</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Treatments</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Description of any actions taken to alter the specimen for a particular purpose</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Includes both proactive and reactive actions
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Mineral heated to enhance color</span></li>
+									
+										<li><span>Pieces glued together for reconstruction</span></li>
+									
+										<li><span>Polished surface to improvement that visibility of fabrics and mineralogy</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="handlingRequirements">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:handlingRequirements</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Handling Requirements</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A summary of the procedural requirements employed to preserve and protect the specimen during physical interaction</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Handle with gloves</span></li>
+									
+										<li><span>Not to be taken out of storage medium</span></li>
+									
+										<li><span>delicate</span></li>
+									
+										<li><span>avoid contact with direct sunlight</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="damageRemarks">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:damageRemarks</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Damage Remarks</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A general description of any material changes to a mineral which is perceived to have negatively affected an item’s value-defining aspects.</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Due to oxidation and hydration of the pyrite in the coal, the sample has largely decayed to a coal powder with some larger coal pieces</span></li>
+									
+										<li><span>Some terminations broken off</span></li>
+									
+										<li><span>Attached label not legible (or torn, or covered) </span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+
+    <h2 id="ConstituentPart">ConstituentPart</h2>
+    <div class="my-4">
+         
+            <a class="btn btn-sm btn-outline-primary m-1" href="#ConstituentPart">minext:ConstituentPart</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#materialEntityIdentifier">minext:materialEntityIdentifier</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#constituentPartIdentifier">minext:constituentPartIdentifier</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#constituentPartType">minext:constituentPartType</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#constituentPartProportion">minext:constituentPartProportion</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#constituentPartRole">minext:constituentPartRole</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#predicatedName">minext:predicatedName</a>
+        
+    </div>
+    
+        <div class="table-responsive" id="ConstituentPart">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Mineral</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A physically discernible part of a compound specimen that has a distinct proportion and role relative to the parent object and a discrete determination based on physical and chemical characteristics. All parts of a compound specimen are unified through physical attachment or other unifying criteria. </td>
+                    </tr>
+                   
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Each Constituent Part belongs to one and only one Constituent Part Type (Rock, Fossil, Mineral, etc). The shared characteristic among all records that utilize the Mineralogy Extension is they must belong to the Constituent Part Type, Mineral defined as an element or a chemical compound that is normally crystalline and that has been formed as a result of geological processes (Nickel 1995).
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="materialEntityIdentifier">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:materialEntityIdentifier</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Material Identifier</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>An identifier for a Material (Compound Specimen).</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Required to establish a relationship between a parent material record (specimen-level) with zero to many child constituent part records (mineral-level)
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>8fa58e08-08de-4ac1-b69c-1235340b7111</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="constituentPartIdentifier">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:constituentPartIdentifier</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Constituent Part Identifier</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A unique identifier for an instance of a ConstituentPart.</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the dwc:constituentPartID globally unique. Recommended best practice is to use a persistent, globally unique identifier. Constituent Part ID is used to construct the relationship between a specimen (compound object) and mineral (constituent part).
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>8fa58e08-08de-4ac1-b69c-1235340b7111</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="constituentPartType">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:constituentPartType</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Constituent Part Type</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Term belonging to an upper-level, generalized Classification Scheme of Constituent Parts (https://docs.google.com/spreadsheets/d/1YiLQaW8-bauA-cdO6v5Gv4keb8gja_zcIH6B8bsGqIw/edit?gid=909692701#gid=909692701)</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Recommended best practice is to use a shared controlled vocabulary. A Constituent Part belongs to only one Constituent Part Type.
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Mineral</span></li>
+									
+										<li><span>Fossil</span></li>
+									
+										<li><span>Rock</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="constituentPartProportion">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:constituentPartProportion</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Proportion</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>The qualitative or quantitative fraction the geologic specimen is composed of the constituent part</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Recommended best practice is to use a controlled vocabulary such as https://cgi.vocabs.ga.gov.au/object?uri=http%3A//resource.geosciml.org/classifier/cgi/proportionterm
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>20%</span></li>
+									
+										<li><span>minor</span></li>
+									
+										<li><span>dominant</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="constituentPartRole">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:constituentPartRole</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Role</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Specifies the relationship between a constituent part and its parent geologic specimen</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Recommended best practice is to use a controlled vocabulary such as https://cgi.vocabs.ga.gov.au/object?uri=http://resource.geosciml.org/classifier/cgi/compoundmaterialconstituentpartrole
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>matrix</span></li>
+									
+										<li><span>groundmass</span></li>
+									
+										<li><span>phenocryst</span></li>
+									
+										<li><span>xenolith</span></li>
+									
+										<li><span>vein</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="predicatedName">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:predicatedName</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Predicated Name</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A compound name of a specimen that includes two parts: 1) Mineral names and 2) One or more term separators (predicates) that define the relationship between the minerals in a specimen.</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Always contains at least three parts: 2 mineral names and the predicated phrase that defines the relationship between them. A predicated name may contain more than two mineral names.
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Azurite after Malachite</span></li>
+									
+										<li><span>Rutile in Quartz</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+
+    <h2 id="GeologicContext">GeologicContext</h2>
+    <div class="my-4">
+         
+            <a class="btn btn-sm btn-outline-primary m-1" href="#GeologicContext">dwc:GeologicContext</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#geologicProvince">minext:geologicProvince</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#complex">minext:complex</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#suite">minext:suite</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#modeOfOccurrence">minext:modeOfOccurrence</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#geologicEvent">minext:geologicEvent</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#mineralSequence">minext:mineralSequence</a>
+        
+    </div>
+    
+        <div class="table-responsive" id="GeologicContext">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Geologic Context</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Geological information, such as stratigraphy, that qualifies a region or place.</td>
+                    </tr>
+                   
+                    
+                    
+
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="geologicProvince">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:geologicProvince</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Geologic Province</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Extensive named region with a similar geologic history throughout or similar structural, petrographic, or physiographic features in which the dwc:Location occurs</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Coastal Plain</span></li>
+									
+										<li><span>Piedmont</span></li>
+									
+										<li><span>Blue Ridge</span></li>
+									
+										<li><span>Colorado Plateaus</span></li>
+									
+										<li><span>Basin and Range</span></li>
+									
+										<li><span>Dalradian Metamorphic Belt</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="complex">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:complex</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Complex</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A lithostratigraphic unit composed of diverse types of any class or classes or rocks, characterized by irregularly mixed lithology or highly complicated structural relations, and does not follow the law of superposition</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Due to the unstructured nature of complexes, both named units and lithological descriptive terms are acceptable values.
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Catalina Core Complex (named unit) igneous complex</span></li>
+									
+										<li><span>injection complex</span></li>
+									
+										<li><span>metamorphic complex</span></li>
+									
+										<li><span>basement complex</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="suite">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:suite</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Suite</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A body of or one or more intrusive, pervasively deformed, or highly metamorphosed rock, generally non-tabular and lacking primary depositional structures, and characterized by lithic homogeneity</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Suite is comparable to the lithostratigraphic ranks, group or formation. Encompasses the geologic unit types, lithodeme and suite, as defined in the North American Stratigraphic Code
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Ashe Metamorphic Suite</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="modeOfOccurrence">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:modeOfOccurrence</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Mode of Occurrence</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A short description of the physical manifestation of a geologic process or geologic environment where a mineral naturally occurs</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Recommended best practice is to use a controlled vocabulary such as https://vocabs.ga.gov.au/object?uri=https%3A//pid.geoscience.gov.au/def/voc/ga/ModesOfOccurence
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Hydrothermal vents</span></li>
+									
+										<li><span>veins</span></li>
+									
+										<li><span>lightning impact</span></li>
+									
+										<li><span>plutonic intrusive</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="geologicEvent">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:geologicEvent</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Geologic Event</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>An identifiable event during which one or more geological processes associated with the formation of a geological specimen or act to modify an existing geological specimen. </td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Sevier orogeny</span></li>
+									
+										<li><span>Alleghanian orogeny</span></li>
+									
+										<li><span>Alpine orogeny</span></li>
+									
+										<li><span>Variscan orogeny</span></li>
+									
+										<li><span>Waipounamu Erosion surface</span></li>
+									
+										<li><span>Vredefort impact</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="mineralSequence">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:mineralSequence</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Mineral Sequence</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A list of minerals in a specimen ordered in a manner that illustrates the relative timing of mineral formation within a specimen.</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                The list should only contain minerals that belong to a readily identifiable sequence of formation. Therefore, a list may contain a subset of the minerals in a specimen. Minerals that formed in-situ with one another are separated by a plus. Minerals that formed in the sequence are separated by a greater than symbol.
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Sphalerite &gt; Quartz &gt; Pyrite</span></li>
+									
+										<li><span>Calcite &gt; Quartz &gt; Sphalerite &gt; Pyrite</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+
+    <h2 id="Hazard">Hazard</h2>
+    <div class="my-4">
+         
+            <a class="btn btn-sm btn-outline-primary m-1" href="#Hazard">minext:Hazard</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#hazardType">minext:hazardType</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#hazardDescription">minext:hazardDescription</a>
+        
+    </div>
+    
+        <div class="table-responsive" id="Hazard">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Hazard</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Properties that describe sources of of potential damage, harm, or adverse health effects on something or someone.</td>
+                    </tr>
+                   
+                    
+                    
+
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="hazardType">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:hazardType</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Hazard Type</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Term that belongs to a hazard classification scheme based on a set of unique characteristics and negative health outcomes.</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Recommended best practice is to use a controlled vocabulary
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Carcinogen</span></li>
+									
+										<li><span>skin irritant</span></li>
+									
+										<li><span>radioactive</span></li>
+									
+										<li><span>toxic</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="hazardDescription">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:hazardDescription</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Hazard Description</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>General remarks regarding the hazard type within the scope of the specific collection object</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>asbestos</span></li>
+									
+										<li><span>slightly radioactive</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+
+    <h2 id="Location">Location</h2>
+    <div class="my-4">
+         
+            <a class="btn btn-sm btn-outline-primary m-1" href="#Location">dwc:Location</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#sampledFeature">minext:sampledFeature</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#namedPlace">minext:namedPlace</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#isTypeLocality">minext:isTypeLocality</a>
+        
+    </div>
+    
+        <div class="table-responsive" id="Location">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Location</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A spatial region or named place.</td>
+                    </tr>
+                   
+                    
+                    
+
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="sampledFeature">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:sampledFeature</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Sampled Feature</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>The type of physical feature, both naturally-occurring and anthropogenic in origin, sampled during a sampling event (dwc:Event) at a dwc:Location</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                A sampled feature has a type and optional name that distinguishes the feature from similar entities. Sampled features can be anthropogenic (roadcut, borehole) or naturally occurring (outcrop).
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>float</span></li>
+									
+										<li><span>mine dump</span></li>
+									
+										<li><span>mine/quarry pit</span></li>
+									
+										<li><span>outcrop</span></li>
+									
+										<li><span>erratic boulder</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="namedPlace">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:namedPlace</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Named Place</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>The full, unabbreviated name of a geographic location not otherwise categorized by a dwc:Location property that is naturally occurring or anthropogenic in origin within a historical, administrative, or cultural context in which dcterms:Location occurs.</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Only the names of locations anthropogenic in origin should use the namedPlace property. For naturally-occurring locations, please use terms in dwc:GeologicContext (e.g., geologicProvince) class. For named places represented as URIs or global unique identifiers, please use dwc:locationID.
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Susanna Mine</span></li>
+									
+										<li><span>Craigleith Quarry</span></li>
+									
+										<li><span>Red Cloud Mine</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="isTypeLocality">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:isTypeLocality</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Is Type Locality</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Whether or not the dwc:Locaiton is the same locality where the original material came from for the formal definition of the mineral species.</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>True</span></li>
+									
+										<li><span>False</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+
+    <h2 id="MaterialAssertion">MaterialAssertion</h2>
+    <div class="my-4">
+         
+            <a class="btn btn-sm btn-outline-primary m-1" href="#MaterialAssertion">dwc:MaterialAssertion</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#specimenDescription">minext:specimenDescription</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#verbatimSize">minext:verbatimSize</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#maxSpecimenDimensionInMillimeters">minext:maxSpecimenDimensionInMillimeters</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#verbatimMass">minext:verbatimMass</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#measuredMassInGrams">minext:measuredMassInGrams</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#mineralDescription">minext:mineralDescription</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#maxCrystalDimensionInMillimeters">minext:maxCrystalDimensionInMillimeters</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#associatedMinerals">minext:associatedMinerals</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#aggregateForm">minext:aggregateForm</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#crystalHabit">minext:crystalHabit</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#crystalForm">minext:crystalForm</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#twinningLaw">minext:twinningLaw</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#color">minext:color</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#exsolutionTexture">minext:exsolutionTexture</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#cleavage">minext:cleavage</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#luster">minext:luster</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#inclusions">minext:inclusions</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#luminescence">minext:luminescence</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#alterationDescription">minext:alterationDescription</a>
+        
+    </div>
+    
+        <div class="table-responsive" id="MaterialAssertion">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Material Assertion</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>An Assertion is a statement about an entity and the process by which it was ascertained. An Assertion can be made at one time and assert the state of something at another time. Examples: a measurement, an observation, an annotation.</td>
+                    </tr>
+                   
+                    
+                    
+
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="specimenDescription">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:specimenDescription</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Specimen Description</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Comments or notes about the specimen (physical object) especially those that distinguish the specimen from similar materials in a collection</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                See broader concept http://rs.tdwg.org/dwc/terms/occurrenceRemarks for additional usage notes
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Showpiece</span></li>
+									
+										<li><span>Historically valuable</span></li>
+									
+										<li><span>Extraordinary composition</span></li>
+									
+										<li><span>Two generations of quartz</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="verbatimSize">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:verbatimSize</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Verbatim Size</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>The verbatim size of a specimen as originally described in primary source material</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>10 cm x 5 cm X 5 cm</span></li>
+									
+										<li><span>largest diameter 16 cm</span></li>
+									
+										<li><span>width 3 inches</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="maxSpecimenDimensionInMillimeters">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:maxSpecimenDimensionInMillimeters</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Maximum Axial Dimension</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Maximum axial dimension of specimen measured in millimeters</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>100</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="verbatimMass">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:verbatimMass</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Verbatim Mass</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>The original reported verbatim mass includes original units of measurement</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>11.01 Lbs</span></li>
+									
+										<li><span>105.07 g</span></li>
+									
+										<li><span>2.45 kg</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="measuredMassInGrams">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:measuredMassInGrams</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Measured Mass In Grams</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Mass of specimen measured in grams</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>4994</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="mineralDescription">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:mineralDescription</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Mineral Description</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Comments or notes about the mineral instance, especially those that distinguish the mineral from similar materials in a collection</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                The scope of this term is strictly to a mineral within the context of the specimen. Specimen level descriptions belong in the related term, specimenDescription. Sibling concept to http://rs.tdwg.org/dwc/terms/occurrenceRemarks
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Pink fluorite on quartz</span></li>
+									
+										<li><span>Lengenbachite on sugar-grained dolomite</span></li>
+									
+										<li><span>Epitaxial growth on kyanite</span></li>
+									
+										<li><span>Doubly terminated quartz crystals</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="maxCrystalDimensionInMillimeters">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:maxCrystalDimensionInMillimeters</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Maximum Axial Dimension</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Maximum axial dimension of largest crystal measured in millimeters</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>30</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="associatedMinerals">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:associatedMinerals</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Associated Minerals</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>List of secondary minerals associated with a mineral in a specimen</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>calcite</span></li>
+									
+										<li><span>dolomite</span></li>
+									
+										<li><span>baryte</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="aggregateForm">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:aggregateForm</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Aggregate Form</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Observable crystal shapes of an assemblage of minerals</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Specimen</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Recommended best practice is to use a controlled vocabulary
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>radial</span></li>
+									
+										<li><span>botryoidal</span></li>
+									
+										<li><span>oolithic</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="crystalHabit">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:crystalHabit</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Crystal Habit</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A general term for describing the outward appearance of a mineral</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Recommended best practice is to use a controlled vocabulary. For a given type of crystal, the habit may vary from locality to locality depending on environment of growth.
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>isometric</span></li>
+									
+										<li><span>tabular</span></li>
+									
+										<li><span>fibrous</span></li>
+									
+										<li><span>dogtooth</span></li>
+									
+										<li><span>nailhead </span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="crystalForm">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:crystalForm</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Crystal Form</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Geometric shape of a crystal</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Recommended best practice is to use a controlled vocabulary
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>cube</span></li>
+									
+										<li><span>ditrigonal pyramid</span></li>
+									
+										<li><span>scalenohedron</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="twinningLaw">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:twinningLaw</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Twinning Law</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Short description of any physically discernable twinning</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Dauphiné twinning/Dauphiné Law</span></li>
+									
+										<li><span>Japan twinning/Japan Law</span></li>
+									
+										<li><span>Brazil twinning/Brazil Law</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="color">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:color</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Color</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>The intrinsic color of a mineral under natural light</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Here, color is caused by the absorption, or lack of absorption of different wavelengths of natural light by a particular mineral
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Blue</span></li>
+									
+										<li><span>green</span></li>
+									
+										<li><span>red</span></li>
+									
+										<li><span>iridescent</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="exsolutionTexture">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:exsolutionTexture</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Exsolution Texture</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A brief description of textures formed by exsolution</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Ilmenite lamellae in olivine</span></li>
+									
+										<li><span>Clinopyroxene lamellae along the (100) plane of orthopyroxene</span></li>
+									
+										<li><span>Antiperthite exsolution.</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="cleavage">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:cleavage</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Cleavage</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Type of breakages along a plane of weakness, especially those parallel to crystal faces</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Extraordinary well developed rectangular cleavage</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="luster">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:luster</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Luster</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>The reflection of light from the surface of a mineral, described by its quality and intensity</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Recommended best practice is to use a controlled vocabulary
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Metallic</span></li>
+									
+										<li><span>Glassy</span></li>
+									
+										<li><span>Waxy</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="inclusions">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:inclusions</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Inclusions</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Short description of any inclusions present within a mineral that includes the phase and physical characteristics</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Star-shaped rutile needles in quartz</span></li>
+									
+										<li><span>Needles of tourmaline in quartz (blue quarz)</span></li>
+									
+										<li><span>Fluid inclusions (liquid bubble and single crystal) in quartz</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="luminescence">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:luminescence</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Luminescence Description</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>The type and nature of light emitted from the mineral upon receiving energy from an external source.</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Includes all types of luminescence including fluorescence (all wavelengths) and phosphorescence. Recommended best practice is to use nomenclature in part based on the source of energy, or the trigger for the luminescence.
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Green fluorescence</span></li>
+									
+										<li><span>Pink under short wave UV light</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="alterationDescription">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:alterationDescription</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Alteration Description</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A description of any observed changes in the composition of a mineral brought about by physical or chemical processes related to changes in the physical or chemical environment. </td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Dolomitization</span></li>
+									
+										<li><span>Fenitization</span></li>
+									
+										<li><span>Rodingitization</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+
+    <h2 id="MineralName">MineralName</h2>
+    <div class="my-4">
+         
+            <a class="btn btn-sm btn-outline-primary m-1" href="#MineralName">minext:MineralName</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#name">minext:name</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#nameIdentifier">minext:nameIdentifier</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#languge">dcterms:languge</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#mineralNamePublishedIn">minext:mineralNamePublishedIn</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#classificationCode">minext:classificationCode</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#nameType">minext:nameType</a>
+        
+            <a class="btn btn-sm btn-outline-primary m-1" href="#nameRemarks">minext:nameRemarks</a>
+        
+    </div>
+    
+        <div class="table-responsive" id="MineralName">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Mineral Name</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>The designation of a mineral by a linguistic expression including both informal (verbatim) and formal (classifications) types</td>
+                    </tr>
+                   
+                    
+                    
+
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="name">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:name</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Name</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A human-readable lexical label assigned to a mineral includes both informal (e.g., variety, synonym) and formal (classification) forms</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                The name defined in the first object is considered the preferred name
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Quartz</span></li>
+									
+										<li><span>Smoky Quartz</span></li>
+									
+										<li><span>Muscovite</span></li>
+									
+										<li><span>Garnet Group</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="nameIdentifier">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:nameIdentifier</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Name Identifier</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>An identifier for the set of dwc:MineralName information. May be a global unique identifier or an identifier specific to the data set.</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Recommended best practice is to use a persistent, globally unique identifier. Name ID is used to establish the one to many relationship between dwc:Mineral and dwc:MineralName that allows the assignment of multiple names to a single mineral in a specimen
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>8fa58e08-08de-4ac1-b69c-1235340b7001</span></li>
+									
+										<li><span>https://api.mindat.org/minerals_ima/21</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="languge">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:dcterms:language</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Language</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Language of the name</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 language tag.
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>en</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="mineralNamePublishedIn">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:mineralNamePublishedIn</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Mineral Name Published In</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A reference to the publication in which the name is derived, provided as formal citations or URI to an external resources</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Narrower scope than dwc:namePublishedIn
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Strunz</span></li>
+									
+										<li><span>H. &amp; Nickel</span></li>
+									
+										<li><span>E.H. (2001): Strunz mineralogical tables. Schweizerbart</span></li>
+									
+										<li><span>Stuttgart</span></li>
+									
+										<li><span>869 p.</span></li>
+									
+										<li><span>Gaines</span></li>
+									
+										<li><span>R.V.</span></li>
+									
+										<li><span>Skinner</span></li>
+									
+										<li><span>H.C.</span></li>
+									
+										<li><span>Foord</span></li>
+									
+										<li><span>E.E.</span></li>
+									
+										<li><span>Mason</span></li>
+									
+										<li><span>B.</span></li>
+									
+										<li><span>Rosenzweig</span></li>
+									
+										<li><span>A. (1997): Dana’s new mineralogy. Wiley &amp; Sons</span></li>
+									
+										<li><span>New York</span></li>
+									
+										<li><span>1819 p.</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="classificationCode">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:classificationCode</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Classification Code</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Alphanumeric pattern that adheres to a defined encoding scheme that identifies a particular term in a classification scheme</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Classification codes are specific to a classification system and conform to a xkos:notationPattern
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>71.02.02a.01</span></li>
+									
+										<li><span>9.AD.25</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="nameType">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:nameType</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Name Type</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>A term belonging a categorization scheme for organizing names based on usage and concept lineage</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <th scope="row">Usage Notes</th>
+                        <td>
+                            
+                                Ideally, terms in this field are derived from a enumerated domain. See Gavryliv (2023) for a detailed breakdown of informal, alternate names.
+                            
+                        </td>
+                    </tr>
+                    
+
+                    
+                        
+                        <tr>
+                            <th scope="row">Examples</th>
+                            <td>
+                                <ul class="td-list">
+									
+										<li><span>Variety</span></li>
+									
+										<li><span>Synonym</span></li>
+									
+										<li><span>Classification</span></li>
+									
+										<li><span>Historical</span></li>
+									
+										<li><span>Group Name</span></li>
+									
+								</ul>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="table-responsive" id="nameRemarks">
+            <table class="table table-compact">
+                <thead>
+                    <tr>
+                        
+                        <th class="property" colspan="2">
+                            <span class="title">minext:nameRemarks</span>
+                            <span class="badge badge-property float-end">Property</span>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Label</th>
+                        <td>Name Remarks</td>
+                    </tr>
+					<tr>
+                        <th scope="row">Definition</th>
+                        <td>Statements that provide further information on any part of a mineral name, especially information not captured elsewhere in the mineral name class</td>
+                    </tr>
+                   
+                    <tr>
+                        <th scope="row">Term Scope</th>
+                        <td>Mineral</td>
+                    </tr>
+                    
+                    
+                    
+
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+<footer class="custom-bg-color">
+	<div class="container">
+        <div class="row">
+
+            <div class="col-lg">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <img class="me-3 footer-logo" src="https://tdwg.github.io/chrono/assets/theme/images/tdwg-logo-short.svg" alt="Latimer Core">
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://github.com/tdwg/ltc">
+                          <span class="fa-stack fa-lg">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.tdwg.org/feed.xml">
+                          <span class="fa-stack fa-lg">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                          </span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-lg">
+                <ul class="fa-ul float-end">
+                    <li>
+                        <i class="fa-li fa fa-chevron-circle-right"></i>
+                        <a href="https://www.tdwg.org/">Biodiversity Information Standards (TDWG)</a>
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-chevron-circle-right"></i>
+                        <a href="https://www.tdwg.org/about/">What is TDWG?</a>
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-chevron-circle-right"></i>
+                        <a href="https://www.tdwg.org/about/contact/">Contact us</a>
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-chevron-circle-right"></i>
+                        <a href="https://www.tdwg.org/about/terms-of-use/#privacy-statement">Privacy policy</a>
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-chevron-circle-right"></i>
+                        <a href="https://www.tdwg.org/about/code-of-conduct/">Code of Conduct</a>
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-chevron-circle-right"></i>
+                        <a href="https://www.tdwg.org/about/diversity-inclusion/">Diversity and Inclusion Statement</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-10 position-relative mx-auto">
+                <div class="small mt-2">
+                    <p>Content on this site, made open by <a href="https://www.tdwg.org/">Biodiversity Information Standards (TDWG)</a>  is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+	<script src="../static/assets/theme/js/jquery.min.js"></script>
+	<script src="../static/assets/theme/js/popper.min.js"></script>
+	<script src="../static/assets/theme/js/bootstrap.min.js"></script>
+	<script src="../static/custom/js/app-script.js"></script>
+
+</body>
+</html>
