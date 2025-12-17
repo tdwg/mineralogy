@@ -1,7 +1,7 @@
 ﻿label,term,column,definition,qualified_term,notes,tdwg_rdf_schema,is_published,editorial_note
 Term,term,term,A word or phrase used to represent a concept  that follows a specific naming convention suitable for machine use,rdf:label,,term_localName,TRUE,
 Label,prefLabel,label,The preferred lexical label for a resource in a given language,skos:prefLabel,,label,TRUE,
-Class Name,className,class_name,Fully qualified class name (with preferred namespace prefix) a term(rdf:Property) belongs to,rdfs:Class,,tdwg_rdf_schema,TRUE,
+Class Name,className,class_name,Class name (without preferred namespace prefix) a term (rdf:Property) belongs to,rdfs:Class,,tdwg_rdf_schema,TRUE,
 Class IRI,classIRI,class_iri,An internationalized resource identifier used to unique identify a class or the class a term belongs to,tdwg:classIRI,,tdwgutility_organizedInClass,TRUE,
 Material Category,materialCategory,material_category,The semantic boundaries of a concept within which a concept is valid within the context of a dwc:Material,tdwg:materialCategory,Intended to be used in conjuncture with dwc:materialCategory or dwc:materialEntityType,,TRUE,
 Definition,definition,definition,A descriptive statement that supplies a complete explanation of the intended meaning of the type and serves to differentiate it from related concepts.,skos:definition,,definition,TRUE,"Alternate rdf_schema term, rdfs_comment"
