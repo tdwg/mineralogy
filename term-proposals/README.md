@@ -17,3 +17,5 @@ New Term and Term Change Proposals to implement the Mineralogy Extension
 | lithodemicUnit                 | New Term      | https://github.com/tdwg/dwc/issues/798   | https://github.com/ben-norton | 2025-01-12     |
 | geologicProvince               | New Term      | https://github.com/tdwg/dwc/issues/799   | https://github.com/ben-norton | 2025-01-12     |
 | geologicEvent                  | New Term      | https://github.com/tdwg/dwc/issues/800   | https://github.com/ben-norton | 2025-01-12     |
+| verbatimMass                   | New Term      | https://github.com/tdwg/dwc/issues/801   | https://github.com/ben-norton | 2025-01-12     |
+| measuredMassInGrams            | New Term      | https://github.com/tdwg/dwc/issues/802   | https://github.com/ben-norton | 2025-01-12     |
