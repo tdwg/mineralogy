@@ -1,6 +1,7 @@
 # Mineralogy Extension for Darwin Core
 The Mineralogy Extension is a set or proposed terms and controlled vocabularies targeted to mineralogy collections as part of a larger effort to extend the Biodiversity Information Standards community and its flagship standard, Darwin Core, to support earth sciences collections.
 
+Extension Specification: [https://github.com/tdwg/mineralogy/blob/main/specification.md](https://github.com/tdwg/mineralogy/blob/main/specification.md)
 Draft Documentation Pages: [https://tdwg.github.io/mineralogy/](https://tdwg.github.io/mineralogy/)
 
 - Author: Mineralogy Extension Task Group
