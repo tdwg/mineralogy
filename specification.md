@@ -10,16 +10,16 @@
 
 ## Table of Contents
 
-1. [Executive Summary](#executive-summary)
-2. [Key Definitions](#key-definitions)
-3. [Background and Motivation](#background-and-motivation)
-4. [Organizational Structure](#organizational-structure)
-5. [Technical Architecture](#technical-architecture)
-6. [Core Classes and Terms](#core-classes-and-terms)
-7. [Data Model and Relationships](#data-model-and-relationships)
-8. [Implementation Guidelines](#implementation-guidelines)
-9. [Controlled Vocabularies](#controlled-vocabularies)
-10. [Use Cases and Examples](#use-cases-and-examples)
+1. [Executive Summary](#1-executive-summary)
+2. [Key Definitions](#2-key-definitions)
+3. [Background and Motivation](#3-background-and-motivation)
+4. [Organizational Structure](#4-organizational-structure)
+5. [Technical Architecture](#5-technical-architecture)
+6. [Core Classes and Terms](#6-core-classes-and-terms)
+7. [Data Model and Relationships](#7-data-model-and-relationships)
+8. [Implementation Guidelines](#8-implementation-guidelines)
+9. [Controlled Vocabularies](#9-controlled-vocabularies)
+10. [Use Cases and Examples](#10-use-cases-and-examples)
 11. [Appendices](#appendices)
 
 ---
