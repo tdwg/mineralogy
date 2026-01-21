@@ -1,7 +1,8 @@
 # Mineralogy Extension for Darwin Core
 ## Comprehensive Technical Documentation
 
-**Version:** DRAFT  
+## $${\color{red}DRAFT}$$
+**Version:** *Pending*
 **Date:** January 21, 2026  
 **Document Type:** Technical Documentation  
 **Prepared By:** Based on TDWG Mineralogy Extension Task Group Resources
