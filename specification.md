@@ -11,7 +11,7 @@
 ## Table of Contents
 
 1. [Executive Summary](#executive-summary)
-2. [Introduction](#introduction)
+2. [Key Definitions](#key-definitions)
 3. [Background and Motivation](#background-and-motivation)
 4. [Organizational Structure](#organizational-structure)
 5. [Technical Architecture](#technical-architecture)
@@ -24,7 +24,7 @@
 
 ---
 
-## Executive Summary
+## 1. Executive Summary
 
 The Mineralogy Extension (MinExt) is a specialized data standard developed by the Mineralogy Extension Task Group under the Biodiversity Information Standards (TDWG) Earth Sciences and Paleobiology (ESP) Interest Group. This extension addresses a critical gap in biodiversity informatics by extending the Darwin Core Archive standard to support mineralogical collections data.
 
@@ -45,38 +45,29 @@ The Mineralogy Extension (MinExt) is a specialized data standard developed by th
 - Researchers requiring standardized mineralogical data
 - Developers of collection management systems
 
----
+--- 
+## 2. Key Definitions
 
-## 1. Introduction
+Compound Specimen
+: Compound Specimen	A collection object comprised of one or more discernible parts, called constituent parts, unified by physical attachment. The object's identity is determined by its constituent parts, which are distinguished from one another within a specific context.
 
-### 1.1 Purpose and Scope
+Constituent Part
+: Physically discernible and proximal parts of a compound specimen identified by a single determination based on physical and chemical exclusivity relative to the parent specimen.
 
-The Mineralogy Extension provides a standardized lexicon for describing mineralogical specimens, enabling improved data sharing, discovery, and integration across institutions. The extension comprises:
+Compound Specimen Model
+: A conceptual data model in which a single physical object, a compound specimen, is composed of and defined by its constituent parts.
 
-- A normative term list with formal definitions
-- Controlled vocabularies for mineralogical properties
-- Support for complex specimen models (compound specimens)
-- Integration with multiple classification systems
-- Enhanced geological context descriptions
+Geologic Material
+: A material entity primarily (dominantly) having parts created by geologic processes, and can include minor parts that are not of geologic origin, such as organic material, and can be solid, fluid, or a mix
 
-### 1.2 Document Status
-
-This document describes the DRAFT version of the Mineralogy Extension. All content is subject to review and ratification by the TDWG community following the organization's standard development processes.
-
-**Key Standards Referenced:**
-- Darwin Core (DwC): http://rs.tdwg.org/dwc/terms/
-- Darwin Core Chronometric Age Extension: http://rs.tdwg.org/chrono/terms/
-- TDWG Standards Documentation Standard (SDS)
-
-### 1.3 RFC 2119 Key Words
-
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+Material Entity
+: An entity that exists in full during the length of time of its existence, persists through this time while maintaining its identity, and has no temporal parts.
 
 ---
 
-## 2. Background and Motivation
+## 3. Background and Motivation
 
-### 2.1 The Need for Mineralogy Extension
+### 3.1 The Need for Mineralogy Extension
 
 #### Knowledge Domain Gap
 
@@ -96,7 +87,7 @@ Extending TDWG's reach to mineralogy serves multiple strategic goals:
 - **Comprehensive collections coverage** across natural history museums
 - **Enhanced interoperability** between biological and geological collections data
 
-### 2.2 Historical Context
+### 3.2 Historical Context
 
 The Mineralogy Extension Task Group was established under the ESP Interest Group, following the successful models of:
 
@@ -109,7 +100,7 @@ These precedents established best practices for:
 - Standards documentation following TDWG guidelines
 - Crosswalk development between related standards
 
-### 2.3 Design Principles
+### 3.3 Design Principles
 
 The extension adheres to the following principles:
 
@@ -119,11 +110,24 @@ The extension adheres to the following principles:
 4. **Practical utility**: Focus on specimen-level data commonly collected by institutions
 5. **Extensibility**: Design to accommodate future expansion
 
----
+### 3. Compound Specimen Model
 
-## 3. Organizational Structure
+### 3.1 Extension Organization 
 
-### 3.1 Task Group Composition
+Implementing Mineralogy Extension Terms: A Three-Part Approach
+Fully implementing Mineralogy Extension Terms requires working with multiple TDWG standards and procedures. The terms are organized into three groups based on how they relate to compound specimens and their ratification requirements:
+1. New Darwin Core Terms (Specimen-Level)
+These terms describe properties of the compound specimen as a whole, which are inherited by all constituent parts. Because they apply at the specimen level, they cannot function as an extension with a zero-to-many relationship to a simple Darwin Core occurrence record. Instead, these terms are proposed as additions to the Darwin Core standard itself.
+2. Extension Terms (Constituent Part-Level)
+These terms describe the individual constituent parts or minerals within a compound specimen. They follow the traditional zero-to-many structure used by Darwin Core extensions, making them suitable for the new Mineralogy Extension.
+3. New Chronometric Age Term
+One term is proposed as an addition to the Chronometric Age Extension.
+
+--
+
+## 4. Organizational Structure
+
+### 4.1 Task Group Composition
 
 #### Conveners
 
@@ -147,7 +151,7 @@ The task group comprises 9 core members representing diverse institutions:
 
 This international representation ensures the extension addresses diverse institutional practices and regional variations in mineralogical collections management.
 
-### 3.2 Governance and Process
+### 4.2 Governance and Process
 
 #### Development Phases
 
@@ -160,12 +164,11 @@ This international representation ensures the extension addresses diverse instit
 - Survey of existing data standardization efforts
 - Community deliberation on vocabulary terms
 - Development of normative term list and documentation
-- Crosswalk creation with related standards
 
 **Phase 3: Review and Ratification**
-- Submission to TDWG for community review
+- Submission to earth sciences collection community for feedback
 - Incorporation of feedback
-- Final ratification following TDWG By-laws
+- Final ratification of terms by TDWG by-laws
 
 #### Development Infrastructure
 
@@ -176,16 +179,15 @@ This international representation ensures the extension addresses diverse instit
 
 ---
 
-## 4. Technical Architecture
+## 5. Technical Architecture
 
-### 4.1 Namespace and Prefixes
+### 5.1 Namespace and Prefixes
 
 The Mineralogy Extension uses the following namespace structure:
 
 **Primary Namespace:**
 - URI: `http://rs.tdwg.org/mineralogy/terms/`
-- Recommended Prefix: `minext:`
-- Alternative Prefix: `geoext:` (used in current documentation)
+- Recommended Prefix: `geoext:`
 
 **Borrowed Vocabularies:**
 
@@ -198,7 +200,7 @@ The Mineralogy Extension uses the following namespace structure:
 | RDF | rdf: | http://www.w3.org/1999/02/22-rdf-syntax-ns# |
 | SKOS | skos: | http://www.w3.org/2004/02/skos/core# |
 
-### 4.2 Extension Architecture
+### 5.2 Extension Architecture
 
 The Mineralogy Extension follows the Darwin Core star schema pattern:
 
@@ -217,20 +219,20 @@ MaterialEntity (Core)
     └─→ Hazard
 ```
 
-### 4.3 Material Categories
+### 5.3 Material Categories
 
 Terms in the extension are assigned to one of two material categories:
 
 1. **Specimen**: Terms applicable to the entire physical specimen
-2. **Constituent Part**: Terms applicable to individual minerals within a specimen
+2. **Constituent Part**: Terms applicable to individual parts within a specimen
 
 This distinction is critical for implementing the compound specimen model.
 
 ---
 
-## 5. Core Classes and Terms
+## 6. Core Classes and Terms
 
-### 5.1 Class Definitions
+### 6.1 Class Definitions
 
 #### ConstituentPart (geoext:ConstituentPart)
 
@@ -321,8 +323,8 @@ measuredChemistrySource: "Smith et al. 2020"
 **Contextual Properties:**
 - associatedMinerals: Co-occurring species
 - alterationDescription: Secondary modifications
-- mineralDescription: Distinguishing features at mineral level
-- specimenDescription: Distinguishing features at specimen level
+- mineralDescription: Distinguishing features at the mineral level
+- specimenDescription: Distinguishing features at the specimen level
 
 #### GeologicContext (dwc:GeologicContext)
 
@@ -399,9 +401,9 @@ hazardRemarks: "Contains asbestos fibers"
 
 ---
 
-## 6. Data Model and Relationships
+## 7. Data Model and Relationships
 
-### 6.1 Compound Specimen Model
+### 7.1 Compound Specimen Model
 
 The extension implements a sophisticated compound specimen model:
 
@@ -446,7 +448,7 @@ Specimen (MaterialEntity)
             measuredChemistry: "SiO2"
 ```
 
-### 6.2 Cardinality Rules
+### 7.2 Cardinality Rules
 
 | Relationship | Cardinality | Notes |
 |--------------|-------------|-------|
@@ -458,7 +460,7 @@ Specimen (MaterialEntity)
 | MaterialEntity → Conservation | 1:1 | Single conservation record per specimen |
 | MaterialEntity → Hazard | 1:1 | Single hazard assessment per specimen |
 
-### 6.3 Identifier Strategy
+### 7.3 Identifier Strategy
 
 **Required Identifiers:**
 - materialEntityID: Links specimens to constituent parts
@@ -472,9 +474,9 @@ Specimen (MaterialEntity)
 
 ---
 
-## 7. Implementation Guidelines
+## 8. Implementation Guidelines
 
-### 7.1 Minimum Metadata Requirements
+### 8.1 Minimum Metadata Requirements
 
 For basic compliance, implementations MUST include:
 
@@ -493,7 +495,7 @@ For basic compliance, implementations MUST include:
 - constituentPartID (linking to parent)
 - name
 
-### 7.2 Recommended Best Practices
+### 8.2 Recommended Best Practices
 
 #### Use of Controlled Vocabularies
 
@@ -512,7 +514,7 @@ Many terms recommend controlled vocabularies:
 3. **Accuracy**: Verify technical terms against authoritative sources
 4. **Documentation**: Maintain clear documentation of local practices
 
-### 7.3 Integration with Existing Systems
+### 8.3 Integration with Existing Systems
 
 #### Darwin Core Archive Structure
 
@@ -549,7 +551,7 @@ Archive Root/
 </extension>
 ```
 
-### 7.4 Database Implementation Patterns
+### 8.4 Database Implementation Patterns
 
 #### Normalized Relational Model
 
@@ -591,9 +593,9 @@ CREATE TABLE chemistry (
 
 ---
 
-## 8. Controlled Vocabularies
+## 9. Controlled Vocabularies
 
-### 8.1 Classification Systems
+### 9.1 Classification Systems
 
 #### Dana Classification
 
@@ -617,7 +619,7 @@ CREATE TABLE chemistry (
 
 **Reference:** Strunz, H. & Nickel, E.H. (2001) Strunz Mineralogical Tables
 
-### 8.2 Material-Specific Vocabularies
+### 9.2 Material-Specific Vocabularies
 
 #### Constituent Part Roles
 
@@ -647,62 +649,9 @@ Source: CGI Proportion Term
 
 **Quantitative:** Percentage values with appropriate precision
 
-### 8.3 Crystal Morphology Vocabularies
+## 10. Use Cases and Examples
 
-#### Crystal Habits
-
-**Common Terms:**
-- acicular (needle-like)
-- bladed
-- botryoidal
-- columnar
-- dendritic
-- drusy
-- equant
-- fibrous
-- foliated
-- granular
-- massive
-- platy
-- prismatic
-- pyramidal
-- reticulated
-- tabular
-
-#### Crystal Forms
-
-**Common Forms:**
-- cube
-- octahedron
-- dodecahedron
-- tetrahedron
-- hexagonal prism
-- rhombohedron
-- scalenohedron
-- dipyramid
-- sphenoid
-
-#### Luster Types
-
-**Metallic Lusters:**
-- metallic
-- submetallic
-
-**Non-Metallic Lusters:**
-- adamantine
-- vitreous (glassy)
-- resinous
-- silky
-- pearly
-- greasy
-- dull
-- earthy
-
----
-
-## 9. Use Cases and Examples
-
-### 9.1 Simple Mineral Specimen
+### 10.1 Simple Mineral Specimen
 
 **Specimen:** Single quartz crystal
 
@@ -743,7 +692,7 @@ Source: CGI Proportion Term
 }
 ```
 
-### 9.2 Compound Specimen
+### 10.2 Compound Specimen
 
 **Specimen:** Fluorite on quartz
 
@@ -803,7 +752,7 @@ Source: CGI Proportion Term
 }
 ```
 
-### 9.3 Type Locality Specimen
+### 10.3 Type Locality Specimen
 
 **Specimen:** Mineral from type locality with chemical analysis
 
@@ -848,7 +797,7 @@ Source: CGI Proportion Term
 }
 ```
 
-### 9.4 Hazardous Material
+### 10.4 Hazardous Material
 
 **Specimen:** Radioactive mineral requiring special handling
 
@@ -883,7 +832,7 @@ Source: CGI Proportion Term
 }
 ```
 
-### 9.5 Mineral Sequence Documentation
+### 10.5 Mineral Sequence Documentation
 
 **Specimen:** Showing paragenetic sequence
 
@@ -903,7 +852,7 @@ Source: CGI Proportion Term
 
 ---
 
-## 10. Appendices
+## 11. Appendices
 
 ### Appendix A: Complete Term Index
 
