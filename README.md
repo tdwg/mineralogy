@@ -1,5 +1,5 @@
 # Mineralogy Extension for Darwin Core
-The Mineralogy Extension is a set or proposed terms and controlled vocabularies targeted to mineralogy collections as part of a larger effort to extend the Biodiversity Information Standards community and its flagship standard, Darwin Core, to support earth sciences collections.
+The Mineralogy Extension is a set of proposed terms and controlled vocabularies targeted to mineralogy collections as part of a larger effort to extend the Biodiversity Information Standards community and its flagship standard, Darwin Core, to support earth sciences collections.
 
 > [!New]
 > Mineralogy Extension Specification: [https://github.com/tdwg/mineralogy/blob/main/specification.md](https://github.com/tdwg/mineralogy/blob/main/specification.md)   
@@ -13,7 +13,7 @@ Draft Documentation Pages: [https://tdwg.github.io/mineralogy/](https://tdwg.git
 ### Conveners
 | Name | Email | Affiliation | GitHub Username | 
 | --- | --- | --- | -- |
-| Ben Norton | [michaelnorton.ben@gmail.com](mailto:michaelnorton.ben@gmail.com) | Independent, Raleigh, NC, USA | [@ben-norton](https://www.github.com/ben-norton)|  
+| Ben Norton | [ben.norton@yale.edu](mailto:ben.norton@yale.edu) | Yale University, Raleigh, NC, USA | [@ben-norton](https://www.github.com/ben-norton)|  
 | Dr. Rachel Walcott | [R.Walcott@nms.ac.uk](mailto:R.Walcott@nms.ac.uk) | National Museums, Scotland | |
 
 ### Core Members
