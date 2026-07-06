@@ -24,18 +24,19 @@ Each reviewer rated every term across four dimensions: applicability (whether th
 
 ### Community Reviewers (returned files)
 
-| Initials | Name | Institution |
-|----------|------|-------------|
-| MR | Mike Rumsey | Head of Mineralogy, Natural History Museum, England, UK |
-| JH | Jana Horak | Petrologist, Head of Geosciences, National Museums Wales, UK |
-| VC | Veronica di Cecco | Collections Technician, Royal Ontario Museum, Canada |
-| CE | Carrie A. Eaton | Museum Curator, Madison, WI, USA |
-| RS | Roy Starkey | Independent mineral collector and researcher, Russell Society UK |
-| MJ | Mary Johnson | USA (comments only, no full term-by-term review) |
-| SJ | Stéphane Jouve, Robert Emmanuel, François Dusoulier, Jérôme Thomas, Pierre Sans-Jofre | Récolnat team, France |
-| DM | Duncan Murdock | Curator, Oxford University Museum of Natural History, UK |
-| YW | Yakov Weiss | Senior Lecturer, Hebrew University of Jerusalem, Israel |
-| MA | Marie Angel | Curatorial Assistant, Geology, California Academy of Sciences, USA |
+| Initials | Name                                                                       | Affiliation                                                                                        |
+| -------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| MR       | Mike Rumsey                                                                | Head of Mineralogy, Natural History Museum, England, UK                                            |
+| JH       | Jana Horak                                                                 | Petrologist, Head of Geosciences, National Museums Wales, UK                                       |
+| VC       | Veronica di Cecco                                                          | Collections Technician, Royal Ontario Museum, Canada                                               |
+| CE       | Carrie A. Eaton                                                            | Museum Curator, Madison, WI, USA                                                                   |
+| RS       | Roy Starkey                                                                | Independent mineral collector and researcher, Russell SocietyUK                                    |
+| MJ       | Mary Johnson                                                               | USA (comments only, no full term-by-term review)                                                   |
+| SJ       | Stéphane Jouve, Robert Emmanuel, François Dusoulier, Jérôme Thomas, Pierre | Récolnat team, France                                                                              |
+| DM       | Duncan Murdock                                                             | Curator, Oxford University Museum of Natural History, UK                                           |
+| YW       | Yakov Weiss                                                                | Senior Lecturer, Hebrew University of Jerusalem, Israel                                            |
+| MA       | Marie Angel                                                                | Curatorial Assistant, Geology, California Academy of Sciences, USA Research Associate, Botanischer |
+|          | David Fichtmueller                                                         | Research Associate, Botanischer Garten und Botanisches Museum, Berlin, Germany                     |
 
 ### Technical Reviewers
 
@@ -94,19 +95,24 @@ Terms with lower or more variable priority included **Twinning Law**, **Classifi
 
 ### Missing Terms Suggested
 
-| Suggested By | Term / Category | Notes |
-|---|---|---|
-| MJ | Social history terms | Provenance, prior collection history, exhibition history, research history, links to publications (including popular books) |
-| MR | Material science / crystallography | Stable isotopes, unit cell parameters, trace element chemistry |
-| MR | Type specimen terms | Currently no terms covering type specimens |
-| MR | Availability flag | Whether sample is available for study, loan, or exhibition |
-| MR | Level of crystallinity | Degree of crystallinity of the specimen |
-| SJ / Récolnat | Verbatim Name | Original textual description of the name (analogous to verbatimEventDate in Darwin Core) |
-| SJ / Récolnat | Vernacular Name | A common or vernacular name |
-| SJ / Récolnat | associatedNameConfirmationTechnique | List of identifiers for analyses associated with Name Confirmation Technique |
-| SJ / Récolnat | Alteration Type, PreservationAlterationText, Pseudomorph | Terms used in ABCD-EFG, not currently covered |
-| JH | Hey classification | Should be included in the Classification Code According To value domain |
-| Multiple | Analytical report links | XRF data, Raman spectra, links to lab reports |
+| Suggested By | Term / Category                                       | Notes                                                                                                                    |
+| ------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| MJ           | Social history terms                                  | Provenance, prior collection history, exhibition history, research history, links to publications (including popular     |
+|              |                                                       | books)                                                                                                                   |
+| MR           | Material science / crystallography                    | Stable isotopes, unit cell parameters, trace element chemistry                                                           |
+| MR           | Type specimen terms                                   | Currently no terms covering type specimens                                                                               |
+| MR           | Availability flag                                     | Whether sample is available for study, loan, or exhibition                                                               |
+| MR           | Level of crystallinity                                | Degree of crystallinity of the specimen                                                                                  |
+| SJ /         | Verbatim Name                                         | Original textual description of the name (analogous to verbatimEventDate in Darwin Core)                                 |
+| Récolnat     |                                                       |                                                                                                                          |
+| SJ /         | Vernacular Name                                       | A common or vernacular name                                                                                              |
+| Récolnat     |                                                       |                                                                                                                          |
+| SJ /         | associatedNameConfirmationTechnique                   | List of identifiers for analyses associated with Name Confirmation Technique                                             |
+| Récolnat     |                                                       |                                                                                                                          |
+| SJ /         | Alteration Type, PreservationAlterationText,          | Terms used in ABCD-EFG, not currently covered                                                                            |
+| Récolnat     | Pseudomorph                                           |                                                                                                                          |
+| JH           | Hey classification                                    | Should be included in the Classification Code According To value domain                                                  |
+| Multiple     | Analytical report links                               | XRF data, Raman spectra, links to lab reports                                                                            |
 
 ---
 

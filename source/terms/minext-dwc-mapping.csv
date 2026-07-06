@@ -1,0 +1,5 @@
+minext_term,dwc_term,description
+SpecimenPart,MaterialEntity,"In Darwin Core, specimen parts are created using a self-join in the Material Entity class where materialEntityID = isPartOfMaterialEntityID. Therefore, all references to Specimen Part are equivalent to dwc:MaterialEntity where isPartOfMaterialEntityID is not null."
+SpecimenPartType,materialEntityCategory,"The Specimen Part type field is equivalent to dwc:MaterialEntityCategory."
+specimenDescription,materialEntityRemarks,"The Specimen description field is equivalent to dwc:MaterialEntityRemarks."
+mineralDescriptio,materialEntityRemarks,"The Mineral description field is equivalent to dwc:MaterialEntityRemarks."
