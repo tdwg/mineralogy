@@ -31,7 +31,7 @@ The Mineralogy Extension (MinExt) is a specialized data standard developed by th
 
 ### Key Features
 
-- **Comprehensive mineral specimen documentation** at both specimen and constituent part levels
+- **Comprehensive mineral specimen documentation** at both specimen and specimen part levels
 - **Support for compound specimen models** with multiple minerals in a single specimen
 - **Integration with existing standards** including Darwin Core and Chronometric Age Extension
 - **Specialized vocabularies** for mineralogical properties, chemical composition, and geological context
@@ -50,13 +50,13 @@ The Mineralogy Extension (MinExt) is a specialized data standard developed by th
 ## 2. Key Definitions
 
 Compound Specimen
-: Compound Specimen	A collection object comprised of one or more discernible parts, called constituent parts, unified by physical attachment. The object's identity is determined by its constituent parts, which are distinguished from one another within a specific context.
+: Compound Specimen	A collection object comprised of one or more discernible parts, called specimen parts, unified by physical attachment. The object's identity is determined by its specimen parts, which are distinguished from one another within a specific context.
 
-Constituent Part
+Specimen Part
 : Physically discernible and proximal parts of a compound specimen identified by a single determination based on physical and chemical exclusivity relative to the parent specimen.
 
 Compound Specimen Model
-: A conceptual data model in which a single physical object, a compound specimen, is composed of and defined by its constituent parts.
+: A conceptual data model in which a single physical object, a compound specimen, is composed of and defined by its specimen parts.
 
 Geologic Material
 : A material entity primarily (dominantly) having parts created by geologic processes, and can include minor parts that are not of geologic origin, such as organic material, and can be solid, fluid, or a mix
@@ -118,9 +118,9 @@ The extension adheres to the following principles:
 Implementing Mineralogy Extension Terms: A Three-Part Approach
 Fully implementing Mineralogy Extension Terms requires working with multiple TDWG standards and procedures. The terms are organized into three groups based on how they relate to compound specimens and their ratification requirements:
 1. New Darwin Core Terms (Specimen-Level)
-These terms describe properties of the compound specimen as a whole, which are inherited by all constituent parts. Because they apply at the specimen level, they cannot function as an extension with a zero-to-many relationship to a simple Darwin Core occurrence record. Instead, these terms are proposed as additions to the Darwin Core standard itself.
-2. Extension Terms (Constituent Part-Level)
-These terms describe the individual constituent parts or minerals within a compound specimen. They follow the traditional zero-to-many structure used by Darwin Core extensions, making them suitable for the new Mineralogy Extension.
+These terms describe properties of the compound specimen as a whole, which are inherited by all specimen parts. Because they apply at the specimen level, they cannot function as an extension with a zero-to-many relationship to a simple Darwin Core occurrence record. Instead, these terms are proposed as additions to the Darwin Core standard itself.
+2. Extension Terms (Specimen Part-Level)
+These terms describe the individual specimen parts or minerals within a compound specimen. They follow the traditional zero-to-many structure used by Darwin Core extensions, making them suitable for the new Mineralogy Extension.
 3. New Chronometric Age Term
 One term is proposed as an addition to the Chronometric Age Extension.
 
@@ -208,8 +208,8 @@ The Mineralogy Extension follows the Darwin Core star schema pattern:
 ```
 MaterialEntity (Core)
     ↓
-    ├─→ ConstituentPart (Extension)
-    │       ├─→ Name (Multiple instances per ConstituentPart)
+    ├─→ SpecimenPart (Extension)
+    │       ├─→ Name (Multiple instances per SpecimenPart)
     │       ├─→ Chemistry
     │       └─→ MaterialAssertion (Mineral properties)
     │
@@ -225,7 +225,7 @@ MaterialEntity (Core)
 Terms in the extension are assigned to one of two material categories:
 
 1. **Specimen**: Terms applicable to the entire physical specimen
-2. **Constituent Part**: Terms applicable to individual parts within a specimen
+2. **Specimen Part**: Terms applicable to individual parts within a specimen
 
 This distinction is critical for implementing the compound specimen model.
 
@@ -235,17 +235,17 @@ This distinction is critical for implementing the compound specimen model.
 
 ### 6.1 Class Definitions
 
-#### ConstituentPart (geoext:ConstituentPart)
+#### SpecimenPart (geoext:SpecimenPart)
 
 **Definition:** A physically discernable part of a compound specimen that has a distinct proportion and role relative to the parent object and a discrete determination based on physical and chemical characteristics.
 
 **Purpose:** Enables documentation of individual minerals within specimens containing multiple mineral species.
 
 **Key Properties:**
-- constituentPartID: Unique identifier for the constituent part
-- constituentPartType: General classification (Mineral, Fossil, Rock)
-- constituentPartProportion: Quantitative or qualitative abundance
-- constituentPartRole: Relationship to parent specimen (matrix, phenocryst, vein, etc.)
+- specimenPartID: Unique identifier for the specimen part
+- specimenPartType: General classification (Mineral, Fossil, Rock)
+- specimenPartProportion: Quantitative or qualitative abundance
+- specimenPartRole: Relationship to parent specimen (matrix, phenocryst, vein, etc.)
 - materialEntityID: Links to parent specimen record
 
 **Usage Context:** Essential for specimens with multiple minerals, such as:
@@ -271,7 +271,7 @@ This distinction is critical for implementing the compound specimen model.
 - nameConfirmationTechnique: Analytical method used for identification
 - catalogedName: Administrative name for specimen-level use
 
-**Multiplicity:** One ConstituentPart may have multiple Name instances, enabling documentation of:
+**Multiplicity:** One SpecimenPart may have multiple Name instances, enabling documentation of:
 - Primary classification name
 - Varietal names
 - Historical synonyms
@@ -298,7 +298,7 @@ measuredChemistrySource: "Smith et al. 2020"
 
 #### MaterialAssertion (dwc:MaterialAssertion)
 
-**Definition:** Assertions about physical and morphological properties of specimens and constituent parts.
+**Definition:** Assertions about physical and morphological properties of specimens and specimen parts.
 
 **Scope:** Contains the most extensive vocabulary for describing:
 
@@ -414,16 +414,16 @@ Specimen (MaterialEntity)
     catalogedName: "Quartz on Calcite"
     specimenDescription: "Exceptional clarity"
     ↓
-    Constituent Part 1 (Mineral)
-        constituentPartID: "CP-001"
+    Specimen Part 1 (Mineral)
+        specimenPartID: "CP-001"
         materialEntityID: "SPEC-001"
-        constituentPartType: "Mineral"
-        constituentPartRole: "matrix"
-        constituentPartProportion: "70%"
+        specimenPartType: "Mineral"
+        specimenPartRole: "matrix"
+        specimenPartProportion: "70%"
         ↓
         Name 1
             nameIdentifier: "NAME-001"
-            constituentPartID: "CP-001"
+            specimenPartID: "CP-001"
             name: "Calcite"
             nameType: "Classification"
             classificationCode: "05.AB.05"
@@ -431,16 +431,16 @@ Specimen (MaterialEntity)
         Chemistry 1
             measuredChemistry: "CaCO3"
     ↓
-    Constituent Part 2 (Mineral)
-        constituentPartID: "CP-002"
+    Specimen Part 2 (Mineral)
+        specimenPartID: "CP-002"
         materialEntityID: "SPEC-001"
-        constituentPartType: "Mineral"
-        constituentPartRole: "phenocryst"
-        constituentPartProportion: "30%"
+        specimenPartType: "Mineral"
+        specimenPartRole: "phenocryst"
+        specimenPartProportion: "30%"
         ↓
         Name 2
             nameIdentifier: "NAME-002"
-            constituentPartID: "CP-002"
+            specimenPartID: "CP-002"
             name: "Quartz"
             nameType: "Classification"
             classificationCode: "04.DA.05"
@@ -453,9 +453,9 @@ Specimen (MaterialEntity)
 
 | Relationship | Cardinality | Notes |
 |--------------|-------------|-------|
-| MaterialEntity → ConstituentPart | 1:n | Specimens may have multiple minerals |
-| ConstituentPart → Name | 1:n | Each mineral may have multiple names |
-| ConstituentPart → Chemistry | 1:1 | One chemistry record per mineral |
+| MaterialEntity → SpecimenPart | 1:n | Specimens may have multiple minerals |
+| SpecimenPart → Name | 1:n | Each mineral may have multiple names |
+| SpecimenPart → Chemistry | 1:1 | One chemistry record per mineral |
 | MaterialEntity → GeologicContext | 1:1 | Single geological context per specimen |
 | MaterialEntity → Location | 1:1 | Single collection location per specimen |
 | MaterialEntity → Conservation | 1:1 | Single conservation record per specimen |
@@ -464,8 +464,8 @@ Specimen (MaterialEntity)
 ### 7.3 Identifier Strategy
 
 **Required Identifiers:**
-- materialEntityID: Links specimens to constituent parts
-- constituentPartID: Unique ID for each mineral instance
+- materialEntityID: Links specimens to specimen parts
+- specimenPartID: Unique ID for each mineral instance
 - nameIdentifier: Unique ID for each name instance
 
 **Best Practices:**
@@ -486,14 +486,14 @@ For basic compliance, implementations MUST include:
 - catalogNumber (from Darwin Core)
 - institutionCode (from Darwin Core)
 
-**Constituent Part Level:**
-- constituentPartID
+**Specimen Part Level:**
+- specimenPartID
 - materialEntityID (linking to parent)
-- constituentPartType
+- specimenPartType
 
 **Name Level:**
 - nameIdentifier
-- constituentPartID (linking to parent)
+- specimenPartID (linking to parent)
 - name
 
 ### 8.2 Recommended Best Practices
@@ -503,9 +503,9 @@ For basic compliance, implementations MUST include:
 Many terms recommend controlled vocabularies:
 
 **High Priority:**
-- constituentPartType: Use consistent mineral/rock/fossil categories
-- constituentPartRole: Use GeoSciML vocabulary (http://resource.geosciml.org/classifier/cgi/compoundmaterialconstituentpartrole)
-- constituentPartProportion: Use CGI proportion terms (http://resource.geosciml.org/classifier/cgi/proportionterm)
+- specimenPartType: Use consistent mineral/rock/fossil categories
+- specimenPartRole: Use GeoSciML vocabulary (http://resource.geosciml.org/classifier/cgi/compoundmaterialspecimenpartrole)
+- specimenPartProportion: Use CGI proportion terms (http://resource.geosciml.org/classifier/cgi/proportionterm)
 - mineralogicalAnalysisProtocol: Use ARDC analytical methods (https://vocabs.ardc.edu.au/viewById/650)
 
 #### Data Quality Considerations
@@ -525,7 +525,7 @@ Hypothetical Standard Darwin Core Archive with extension:
 Archive Root/
 ├── meta.xml
 ├── occurrence.txt (MaterialEntity core)
-├── constituentpart.txt (ConstituentPart extension)
+├── specimenpart.txt (SpecimenPart extension)
 ├── name.txt (Name extension)
 ├── chemistry.txt (Chemistry extension)
 ├── geologiccontext.txt (GeologicContext extension)
@@ -540,14 +540,14 @@ Archive Root/
            linesTerminatedBy="\n" 
            fieldsEnclosedBy='"' 
            ignoreHeaderLines="1" 
-           rowType="http://rs.tdwg.org/mineralogy/terms/ConstituentPart">
+           rowType="http://rs.tdwg.org/mineralogy/terms/SpecimenPart">
     <files>
-        <location>constituentpart.txt</location>
+        <location>specimenpart.txt</location>
     </files>
     <coreid index="0"/>
-    <field index="1" term="http://rs.tdwg.org/mineralogy/terms/constituentPartID"/>
+    <field index="1" term="http://rs.tdwg.org/mineralogy/terms/specimenPartID"/>
     <field index="2" term="http://rs.tdwg.org/mineralogy/terms/materialEntityID"/>
-    <field index="3" term="http://rs.tdwg.org/mineralogy/terms/constituentPartType"/>
+    <field index="3" term="http://rs.tdwg.org/mineralogy/terms/specimenPartType"/>
     <!-- Additional fields... -->
 </extension>
 ```
@@ -565,19 +565,19 @@ CREATE TABLE compoundSpecimen (
     specimenDescription TEXT
 );
 
--- Constituent Part table
-CREATE TABLE constituentPart (
-    constituentPartID VARCHAR(50) PRIMARY KEY,
+-- Specimen Part table
+CREATE TABLE specimenPart (
+    specimenPartID VARCHAR(50) PRIMARY KEY,
     materialEntityID VARCHAR(50) REFERENCES specimen(materialEntityID),
-    constituentPartType VARCHAR(50),
-    constituentPartRole VARCHAR(100),
-    constituentPartProportion VARCHAR(50)
+    specimenPartType VARCHAR(50),
+    specimenPartRole VARCHAR(100),
+    specimenPartProportion VARCHAR(50)
 );
 
--- Name table (multiple names per constituent part)
+-- Name table (multiple names per specimen part)
 CREATE TABLE mineral_name (
     nameID VARCHAR(50) PRIMARY KEY,
-    constituentPartID VARCHAR(50) REFERENCES constituent_part(constituentPartID),
+    specimenPartID VARCHAR(50) REFERENCES specimenPart(specimenPartID),
     name VARCHAR(200),
     nameType VARCHAR(50),
     classificationCode VARCHAR(20)
@@ -586,7 +586,7 @@ CREATE TABLE mineral_name (
 -- Chemistry table
 CREATE TABLE chemistry (
     chemistryID VARCHAR(50) PRIMARY KEY,
-    constituentPartID VARCHAR(50) REFERENCES constituent_part(constituentPartID),
+    specimenPartID VARCHAR(50) REFERENCES specimenPart(specimenPartID),
     measuredChemistry TEXT,
     mineralogicalAnalysisProtocol VARCHAR(200)
 );
@@ -622,10 +622,10 @@ CREATE TABLE chemistry (
 
 ### 9.2 Material-Specific Vocabularies
 
-#### Constituent Part Roles
+#### Specimen Part Roles
 
-Source: GeoSciML Compound Material Constituent Part Role
-(http://resource.geosciml.org/classifier/cgi/compoundmaterialconstituentpartrole)
+Source: GeoSciML Compound Material Specimen Part Role
+(http://resource.geosciml.org/classifier/cgi/compoundmaterialspecimenpartrole)
 
 **Common Values:**
 - matrix
@@ -665,26 +665,26 @@ Source: CGI Proportion Term
     "catalogedName": "Quartz",
     "specimenDescription": "Doubly terminated crystal with exceptional clarity"
   },
-  "constituentPart": [{
-    "constituentPartID": "NCSM-MIN-12345-CP-001",
+  "specimenPart": [{
+    "specimenPartID": "NCSM-MIN-12345-CP-001",
     "materialEntityID": "NCSM-MIN-12345",
-    "constituentPartType": "Mineral",
-    "constituentPartProportion": "100%",
-    "constituentPartRole": "sole constituent"
+    "specimenPartType": "Mineral",
+    "specimenPartProportion": "100%",
+    "specimenPartRole": "sole constituent"
   }],
   "name": [{
     "nameIdentifier": "NCSM-MIN-12345-NAME-001",
-    "constituentPartID": "NCSM-MIN-12345-CP-001",
+    "specimenPartID": "NCSM-MIN-12345-CP-001",
     "name": "Quartz",
     "nameType": "Classification",
     "classificationCode": "04.DA.05"
   }],
   "chemistry": {
-    "constituentPartID": "NCSM-MIN-12345-CP-001",
+    "specimenPartID": "NCSM-MIN-12345-CP-001",
     "measuredChemistry": "SiO2"
   },
   "materialAssertion": {
-    "constituentPartID": "NCSM-MIN-12345-CP-001",
+    "specimenPartID": "NCSM-MIN-12345-CP-001",
     "color": "colorless",
     "luster": "vitreous",
     "crystalHabit": "prismatic",
@@ -708,33 +708,33 @@ Source: CGI Proportion Term
     "measuredHeightInMillimeters": 85,
     "measuredDepthInMillimeters": 65
   },
-  "constituentPart": [
+  "specimenPart": [
     {
-      "constituentPartID": "SI-NMNH-98765-CP-001",
+      "specimenPartID": "SI-NMNH-98765-CP-001",
       "materialEntityID": "SI-NMNH-98765",
-      "constituentPartType": "Mineral",
-      "constituentPartRole": "matrix",
-      "constituentPartProportion": "60%"
+      "specimenPartType": "Mineral",
+      "specimenPartRole": "matrix",
+      "specimenPartProportion": "60%"
     },
     {
-      "constituentPartID": "SI-NMNH-98765-CP-002",
+      "specimenPartID": "SI-NMNH-98765-CP-002",
       "materialEntityID": "SI-NMNH-98765",
-      "constituentPartType": "Mineral",
-      "constituentPartRole": "phenocryst",
-      "constituentPartProportion": "40%"
+      "specimenPartType": "Mineral",
+      "specimenPartRole": "phenocryst",
+      "specimenPartProportion": "40%"
     }
   ],
   "name": [
     {
       "nameIdentifier": "SI-NMNH-98765-NAME-001",
-      "constituentPartID": "SI-NMNH-98765-CP-001",
+      "specimenPartID": "SI-NMNH-98765-CP-001",
       "name": "Quartz",
       "nameType": "Classification",
       "classificationCode": "04.DA.05"
     },
     {
       "nameIdentifier": "SI-NMNH-98765-NAME-002",
-      "constituentPartID": "SI-NMNH-98765-CP-002",
+      "specimenPartID": "SI-NMNH-98765-CP-002",
       "name": "Fluorite",
       "nameType": "Classification",
       "classificationCode": "03.AB.25"
@@ -742,7 +742,7 @@ Source: CGI Proportion Term
   ],
   "materialAssertion": [
     {
-      "constituentPartID": "SI-NMNH-98765-CP-002",
+      "specimenPartID": "SI-NMNH-98765-CP-002",
       "mineralDescription": "Pink fluorite cubes on drusy quartz",
       "color": "pink",
       "crystalForm": "cube",
@@ -764,21 +764,21 @@ Source: CGI Proportion Term
     "catalogNumber": "T-001",
     "institutionCode": "NMBE"
   },
-  "constituentPart": [{
-    "constituentPartID": "NMBE-MIN-T-001-CP-001",
+  "specimenPart": [{
+    "specimenPartID": "NMBE-MIN-T-001-CP-001",
     "materialEntityID": "NMBE-MIN-T-001",
-    "constituentPartType": "Mineral"
+    "specimenPartType": "Mineral"
   }],
   "name": [{
     "nameIdentifier": "NMBE-MIN-T-001-NAME-001",
-    "constituentPartID": "NMBE-MIN-T-001-CP-001",
+    "specimenPartID": "NMBE-MIN-T-001-CP-001",
     "name": "Lengenbachite",
     "nameType": "Classification",
     "mineralNamePublishedIn": "Graeser, S. & Schwander, H. (1987): Mineralien und Erzbildung in den Dolomiten am Lengenbachtal (Binnatal, Kt. Wallis)",
     "nameConfirmationTechnique": "X-ray Diffraction"
   }],
   "chemistry": {
-    "constituentPartID": "NMBE-MIN-T-001-CP-001",
+    "specimenPartID": "NMBE-MIN-T-001-CP-001",
     "measuredChemistry": "Pb6(Ag,Cu)2As4S13",
     "mineralogicalAnalysisProtocol": "Electron probe microanalysis",
     "measuredChemistrySource": "Graeser & Schwander (1987)"
@@ -809,14 +809,14 @@ Source: CGI Proportion Term
     "catalogNumber": "RAD-056",
     "institutionCode": "NHMG"
   },
-  "constituentPart": [{
-    "constituentPartID": "NHMG-MIN-RAD-056-CP-001",
+  "specimenPart": [{
+    "specimenPartID": "NHMG-MIN-RAD-056-CP-001",
     "materialEntityID": "NHMG-MIN-RAD-056",
-    "constituentPartType": "Mineral"
+    "specimenPartType": "Mineral"
   }],
   "name": [{
     "nameIdentifier": "NHMG-MIN-RAD-056-NAME-001",
-    "constituentPartID": "NHMG-MIN-RAD-056-CP-001",
+    "specimenPartID": "NHMG-MIN-RAD-056-CP-001",
     "name": "Autunite",
     "nameType": "Classification"
   }],
@@ -862,7 +862,7 @@ Source: CGI Proportion Term
 1. geoext:Chemistry
 2. chrono:ChronometricAge
 3. geoext:Conservation
-4. geoext:ConstituentPart
+4. geoext:SpecimenPart
 5. dwc:GeologicContext
 6. geoext:Hazard
 7. dwc:Location
@@ -885,11 +885,11 @@ Source: CGI Proportion Term
 - geoext:handlingRequirements
 - geoext:treatments
 
-**ConstituentPart (5 terms)**
-- geoext:constituentPartID
-- geoext:constituentPartProportion
-- geoext:constituentPartRole
-- geoext:constituentPartType
+**SpecimenPart (5 terms)**
+- geoext:specimenPartID
+- geoext:specimenPartProportion
+- geoext:specimenPartRole
+- geoext:specimenPartType
 - geoext:materialEntityID
 
 **GeologicContext (5 terms)**
@@ -950,7 +950,7 @@ The Mineralogy Extension is designed to be compatible with the Extension for Geo
 
 | MinExt Term | EFG Equivalent | SKOS Relationship |
 |-------------|----------------|-------------------|
-| geoext:constituentPartType | abcd-efg:RockMineralUsage | skos:broadMatch |
+| geoext:specimenPartType | abcd-efg:RockMineralUsage | skos:broadMatch |
 | geoext:geologicProvince | Pending EFG review | Under development |
 | geoext:sampledFeature | abcd-efg:SamplingFeature | skos:exactMatch |
 
@@ -965,7 +965,7 @@ The standard uses the following metadata qualifiers:
 | Term | Machine-readable representation | rdf:label |
 | Label | Human-readable label | skos:prefLabel |
 | Class | Parent class | rdfs:Class |
-| Material Category | Applicable scope (Specimen/Constituent Part) | tdwg:materialCategory |
+| Material Category | Applicable scope (Specimen/Specimen Part) | tdwg:materialCategory |
 | Definition | Complete explanation | skos:definition |
 | Examples | Usage examples | skos:example |
 | Usage Note | Implementation guidance | vann:usageNote |
