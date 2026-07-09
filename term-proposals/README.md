@@ -1,58 +1,58 @@
 # New Term Proposals to implement the Mineralogy Extension
 2026-07-06
 
-| Term                             | Class            | Issue                                    | Date Submitted |
-| -------------------------------- | ---------------- | ---------------------------------------- | -------------- |
-| Chemistry (class)                | Chemistry        | https://github.com/tdwg/dwc/issues/791   | 2026-01-06     |
-| chemistryRemarks                 | Chemistry        | https://github.com/tdwg/dwc/issues/953   | 2026-07-06     |
-| measuredChemistry                | Chemistry        | https://github.com/tdwg/dwc/issues/792   | 2026-01-06     |
-| measuredChemistrySource          | Chemistry        | https://github.com/tdwg/dwc/issues/793   | 2026-01-06     |
-| mineralogicalAnalysisProtocol    | Chemistry        | https://github.com/tdwg/dwc/issues/954   | 2026-07-06     |
-| chronometricAgeGeologicProcess   | ChronometricAge  | https://github.com/tdwg/chrono/issues/49 | 2026-01-05     |
-| Conservation (class)             | Conservation     | https://github.com/tdwg/dwc/issues/940   | 2026-07-06     |
-| damageRemarks                    | Conservation     | https://github.com/tdwg/dwc/issues/952   | 2026-07-06     |
-| handlingRequirements             | Conservation     | https://github.com/tdwg/dwc/issues/951   | 2026-07-06     |
-| treatments                       | Conservation     | https://github.com/tdwg/dwc/issues/950   | 2026-07-06     |
-| geologicEvent                    | GeologicContext  | https://github.com/tdwg/dwc/issues/800   | 2026-01-12     |
-| geologicProvince                 | GeologicContext  | https://github.com/tdwg/dwc/issues/799   | 2026-01-12     |
-| lithodemicUnit                   | GeologicContext  | https://github.com/tdwg/dwc/issues/798   | 2026-01-12     |
-| mineralSequence                  | GeologicContext  | https://github.com/tdwg/dwc/issues/955   | 2026-07-06     |
-| tectonicUnits                    | GeologicContext  | https://github.com/tdwg/dwc/issues/956   | 2026-07-06     |
-| Hazard (class)                   | Hazard           | https://github.com/tdwg/dwc/issues/789   | 2026-01-06     |
-| hazardRemarks                    | Hazard           | https://github.com/tdwg/dwc/issues/790   | 2026-01-06     |
-| hazardType                       | Hazard           | https://github.com/tdwg/dwc/issues/788   | 2026-01-06     |
-| isTypeLocality                   | Location         | https://github.com/tdwg/dwc/issues/796   | 2026-01-08     |
-| namedPlace                       | Location         | https://github.com/tdwg/dwc/issues/795   | 2026-01-08     |
-| sampledFeature                   | Location         | https://github.com/tdwg/dwc/issues/794   | 2026-01-08     |
-| aggregateForm                    | MaterialAssertion | https://github.com/tdwg/dwc/issues/965  | 2026-07-06     |
-| alterationDescription            | MaterialAssertion | https://github.com/tdwg/dwc/issues/975  | 2026-07-06     |
-| assertionTypeSourceIRI           | MaterialAssertion | https://github.com/tdwg/dwc/issues/785  | 2025-12-17     |
-| associatedMinerals               | MaterialAssertion | https://github.com/tdwg/dwc/issues/964  | 2026-07-06     |
-| cleavage                         | MaterialAssertion | https://github.com/tdwg/dwc/issues/971  | 2026-07-06     |
-| color                            | MaterialAssertion | https://github.com/tdwg/dwc/issues/969  | 2026-07-06     |
-| crystalForm                      | MaterialAssertion | https://github.com/tdwg/dwc/issues/967  | 2026-07-06     |
-| crystalHabit                     | MaterialAssertion | https://github.com/tdwg/dwc/issues/966  | 2026-07-06     |
-| exsolutionTexture                | MaterialAssertion | https://github.com/tdwg/dwc/issues/970  | 2026-07-06     |
-| inclusions                       | MaterialAssertion | https://github.com/tdwg/dwc/issues/973  | 2026-07-06     |
-| luminescence                     | MaterialAssertion | https://github.com/tdwg/dwc/issues/974  | 2026-07-06     |
-| luster                           | MaterialAssertion | https://github.com/tdwg/dwc/issues/972  | 2026-07-06     |
-| maxCrystalDimensionInMillimeters | MaterialAssertion | https://github.com/tdwg/dwc/issues/963  | 2026-07-06     |
-| measuredDepthInMillimeters       | MaterialAssertion | https://github.com/tdwg/dwc/issues/961  | 2026-07-06     |
-| measuredHeightInMillimeters      | MaterialAssertion | https://github.com/tdwg/dwc/issues/960  | 2026-07-06     |
-| measuredMassInGrams              | MaterialAssertion | https://github.com/tdwg/dwc/issues/802  | 2026-01-12     |
-| measuredWidthInMillimeters       | MaterialAssertion | https://github.com/tdwg/dwc/issues/959  | 2026-07-06     |
-| mineralDescription               | MaterialAssertion | https://github.com/tdwg/dwc/issues/962  | 2026-07-06     |
-| specimenDescription              | MaterialAssertion | https://github.com/tdwg/dwc/issues/957  | 2026-07-06     |
-| twinningLaw                      | MaterialAssertion | https://github.com/tdwg/dwc/issues/968  | 2026-07-06     |
-| verbatimMass                     | MaterialAssertion | https://github.com/tdwg/dwc/issues/801  | 2026-01-12     |
-| verbatimSize                     | MaterialAssertion | https://github.com/tdwg/dwc/issues/958  | 2026-07-06     |
-| materialProportion               | MaterialEntity   | https://github.com/tdwg/dwc/issues/941   | 2026-07-06     |
-| materialRole                     | MaterialEntity   | https://github.com/tdwg/dwc/issues/942   | 2026-07-06     |
-| classificationCode               | GeoName             | https://github.com/tdwg/dwc/issues/946   | 2026-07-06     |
-| classificationSystem             | GeoName             | https://github.com/tdwg/dwc/issues/945   | 2026-07-06     |
-| geologicalMaterialName                             | GeoName             | https://github.com/tdwg/dwc/issues/943   | 2026-07-06     |
-| GeoName (class)                     | GeoName             | https://github.com/tdwg/dwc/issues/939   | 2026-07-06     |
-| geologicalMaterialNameConfirmationTechnique        | GeoName             | https://github.com/tdwg/dwc/issues/948   | 2026-07-06     |
-| geologicalMaterialNameIdentifier                   | GeoName             | https://github.com/tdwg/dwc/issues/944   | 2026-07-06     |
-| geologicalMaterialNameRemarks                      | GeoName             | https://github.com/tdwg/dwc/issues/949   | 2026-07-06     |
-| geologicalMaterialNameType                         | GeoName             | https://github.com/tdwg/dwc/issues/947   | 2026-07-06     |
+| Term                                        | Class             | Issue                                    | Date Submitted |
+| ------------------------------------------- | ----------------- | ---------------------------------------- | -------------- |
+| Chemistry (class)                           | Chemistry         | https://github.com/tdwg/dwc/issues/791   | 2026-01-06     |
+| chemistryRemarks                            | Chemistry         | https://github.com/tdwg/dwc/issues/953   | 2026-07-06     |
+| measuredChemistry                           | Chemistry         | https://github.com/tdwg/dwc/issues/792   | 2026-01-06     |
+| measuredChemistrySource                     | Chemistry         | https://github.com/tdwg/dwc/issues/793   | 2026-01-06     |
+| mineralogicalAnalysisProtocol               | Chemistry         | https://github.com/tdwg/dwc/issues/954   | 2026-07-06     |
+| chronometricAgeGeologicProcess              | ChronometricAge   | https://github.com/tdwg/chrono/issues/49 | 2026-01-05     |
+| Conservation (class)                        | Conservation      | https://github.com/tdwg/dwc/issues/940   | 2026-07-06     |
+| damageRemarks                               | Conservation      | https://github.com/tdwg/dwc/issues/952   | 2026-07-06     |
+| handlingRequirements                        | Conservation      | https://github.com/tdwg/dwc/issues/951   | 2026-07-06     |
+| treatments                                  | Conservation      | https://github.com/tdwg/dwc/issues/950   | 2026-07-06     |
+| geologicEvent                               | GeologicContext   | https://github.com/tdwg/dwc/issues/800   | 2026-01-12     |
+| geologicProvince                            | GeologicContext   | https://github.com/tdwg/dwc/issues/799   | 2026-01-12     |
+| lithodemicUnit                              | GeologicContext   | https://github.com/tdwg/dwc/issues/798   | 2026-01-12     |
+| mineralSequence                             | GeologicContext   | https://github.com/tdwg/dwc/issues/955   | 2026-07-06     |
+| tectonicUnits                               | GeologicContext   | https://github.com/tdwg/dwc/issues/956   | 2026-07-06     |
+| Hazard (class)                              | Hazard            | https://github.com/tdwg/dwc/issues/789   | 2026-01-06     |
+| hazardRemarks                               | Hazard            | https://github.com/tdwg/dwc/issues/790   | 2026-01-06     |
+| hazardType                                  | Hazard            | https://github.com/tdwg/dwc/issues/788   | 2026-01-06     |
+| isTypeLocality                              | Location          | https://github.com/tdwg/dwc/issues/796   | 2026-01-08     |
+| namedPlace                                  | Location          | https://github.com/tdwg/dwc/issues/795   | 2026-01-08     |
+| sampledFeature                              | Location          | https://github.com/tdwg/dwc/issues/794   | 2026-01-08     |
+| aggregateForm                               | MaterialAssertion | https://github.com/tdwg/dwc/issues/965   | 2026-07-06     |
+| alterationDescription                       | MaterialAssertion | https://github.com/tdwg/dwc/issues/975   | 2026-07-06     |
+| assertionTypeSourceIRI                      | MaterialAssertion | https://github.com/tdwg/dwc/issues/785   | 2025-12-17     |
+| associatedMinerals                          | MaterialAssertion | https://github.com/tdwg/dwc/issues/964   | 2026-07-06     |
+| cleavage                                    | MaterialAssertion | https://github.com/tdwg/dwc/issues/971   | 2026-07-06     |
+| color                                       | MaterialAssertion | https://github.com/tdwg/dwc/issues/969   | 2026-07-06     |
+| crystalForm                                 | MaterialAssertion | https://github.com/tdwg/dwc/issues/967   | 2026-07-06     |
+| crystalHabit                                | MaterialAssertion | https://github.com/tdwg/dwc/issues/966   | 2026-07-06     |
+| exsolutionTexture                           | MaterialAssertion | https://github.com/tdwg/dwc/issues/970   | 2026-07-06     |
+| inclusions                                  | MaterialAssertion | https://github.com/tdwg/dwc/issues/973   | 2026-07-06     |
+| luminescence                                | MaterialAssertion | https://github.com/tdwg/dwc/issues/974   | 2026-07-06     |
+| luster                                      | MaterialAssertion | https://github.com/tdwg/dwc/issues/972   | 2026-07-06     |
+| maxCrystalDimensionInMillimeters            | MaterialAssertion | https://github.com/tdwg/dwc/issues/963   | 2026-07-06     |
+| measuredDepthInMillimeters                  | MaterialAssertion | https://github.com/tdwg/dwc/issues/961   | 2026-07-06     |
+| measuredHeightInMillimeters                 | MaterialAssertion | https://github.com/tdwg/dwc/issues/960   | 2026-07-06     |
+| measuredMassInGrams                         | MaterialAssertion | https://github.com/tdwg/dwc/issues/802   | 2026-01-12     |
+| measuredWidthInMillimeters                  | MaterialAssertion | https://github.com/tdwg/dwc/issues/959   | 2026-07-06     |
+| mineralDescription                          | MaterialAssertion | https://github.com/tdwg/dwc/issues/962   | 2026-07-06     |
+| specimenDescription                         | MaterialAssertion | https://github.com/tdwg/dwc/issues/957   | 2026-07-06     |
+| twinningLaw                                 | MaterialAssertion | https://github.com/tdwg/dwc/issues/968   | 2026-07-06     |
+| verbatimMass                                | MaterialAssertion | https://github.com/tdwg/dwc/issues/801   | 2026-01-12     |
+| verbatimSize                                | MaterialAssertion | https://github.com/tdwg/dwc/issues/958   | 2026-07-06     |
+| materialProportion                          | MaterialEntity    | https://github.com/tdwg/dwc/issues/941   | 2026-07-06     |
+| materialRole                                | MaterialEntity    | https://github.com/tdwg/dwc/issues/942   | 2026-07-06     |
+| classificationCode                          | GeoName           | https://github.com/tdwg/dwc/issues/946   | 2026-07-06     |
+| classificationSystem                        | GeoName           | https://github.com/tdwg/dwc/issues/945   | 2026-07-06     |
+| geologicalMaterialName                      | GeoName           | https://github.com/tdwg/dwc/issues/943   | 2026-07-06     |
+| GeoName (class)                             | GeoName           | https://github.com/tdwg/dwc/issues/939   | 2026-07-06     |
+| geologicalMaterialNameConfirmationTechnique | GeoName           | https://github.com/tdwg/dwc/issues/948   | 2026-07-06     |
+| geologicalMaterialNameIdentifier            | GeoName           | https://github.com/tdwg/dwc/issues/944   | 2026-07-06     |
+| geologicalMaterialNameRemarks               | GeoName           | https://github.com/tdwg/dwc/issues/949   | 2026-07-06     |
+| geologicalMaterialNameType                  | GeoName           | https://github.com/tdwg/dwc/issues/947   | 2026-07-06     |
