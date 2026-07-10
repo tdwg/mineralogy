@@ -42,13 +42,13 @@ specimenDescription,MaterialAssertion,https://github.com/tdwg/dwc/issues/957,202
 twinningLaw,MaterialAssertion,https://github.com/tdwg/dwc/issues/968,2026-07-06
 verbatimMass,MaterialAssertion,https://github.com/tdwg/dwc/issues/801,2026-01-12
 verbatimSize,MaterialAssertion,https://github.com/tdwg/dwc/issues/958,2026-07-06
-MaterialProportion,MaterialEntity,https://github.com/tdwg/dwc/issues/941,2026-07-06
-MaterialRole,MaterialEntity,https://github.com/tdwg/dwc/issues/942,2026-07-06
-classificationCode,Name,https://github.com/tdwg/dwc/issues/946,2026-07-06
-mineralNamePublishedIn,Name,https://github.com/tdwg/dwc/issues/945,2026-07-06
-name,Name,https://github.com/tdwg/dwc/issues/943,2026-07-06
-Name (class),Name,https://github.com/tdwg/dwc/issues/939,2026-07-06
-nameConfirmationTechnique,Name,https://github.com/tdwg/dwc/issues/948,2026-07-06
-nameIdentifier,Name,https://github.com/tdwg/dwc/issues/944,2026-07-06
-nameRemarks,Name,https://github.com/tdwg/dwc/issues/949,2026-07-06
-nameType,Name,https://github.com/tdwg/dwc/issues/947,2026-07-06
+materialProportion,MaterialEntity,https://github.com/tdwg/dwc/issues/941,2026-07-06
+materialRole,MaterialEntity,https://github.com/tdwg/dwc/issues/942,2026-07-06
+classificationCode,GeoName,https://github.com/tdwg/dwc/issues/946,2026-07-06
+classificationSystem,GeoName,https://github.com/tdwg/dwc/issues/945,2026-07-06
+geologicalMaterialName,GeoName,https://github.com/tdwg/dwc/issues/943,2026-07-06
+GeoName (class),GeoName,https://github.com/tdwg/dwc/issues/939,2026-07-06
+geologicalMaterialNameConfirmationProtocol,GeoName,https://github.com/tdwg/dwc/issues/948,2026-07-06
+geologicalMaterialNameID,GeoName,https://github.com/tdwg/dwc/issues/944,2026-07-06
+geologicalMaterialNameRemarks,GeoName,https://github.com/tdwg/dwc/issues/949,2026-07-06
+geologicalMaterialNameType,GeoName,https://github.com/tdwg/dwc/issues/947,2026-07-06
