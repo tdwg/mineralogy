@@ -4,7 +4,6 @@ The Mineralogy Extension is a set of proposed terms and controlled vocabularies 
 > [!New]
 > Mineralogy Extension Specification: [https://github.com/tdwg/mineralogy/blob/main/specification.md](https://github.com/tdwg/mineralogy/blob/main/specification.md)   
 
-Draft Documentation Pages: [https://tdwg.github.io/mineralogy/](https://tdwg.github.io/mineralogy/)
 
 - Author: Mineralogy Extension Task Group
 - Acronym: MinExt
